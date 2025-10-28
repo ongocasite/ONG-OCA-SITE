@@ -7,16 +7,17 @@ O projeto foi desenvolvido com foco em simplicidade, desempenho e fácil manuten
 
 A estrutura foi organizada de forma direta, mantendo todos os recursos essenciais do site de maneira clara e objetiva:
 
-/
-├── img/ # Diretório de imagens do site
-│ ├── doação/ # Imagens relacionadas à seção de doações
-│ ├── logotipo - banco/ # Logos dos bancos utilizados na área de doação
-│ ├── logotipo - ong oca/ # Logotipos institucionais da ONG
-│ └── logotipo - parceiros/# Logotipos de parceiros
-├── CNAME # Arquivo de domínio personalizado (www.ongoca.org)
-├── LICENSE # Licença do projeto
-├── README.md # Documentação técnica do projeto
-└── index.html # Arquivo principal (HTML, CSS e JS integrados)
+-  /
+-  ├── img/                     # Diretório de imagens do site
+- │   ├── doação/              # Imagens relacionadas à seção de doações
+- │   ├── logotipo - banco/    # Logos dos bancos utilizados na área de doação
+- │   ├── logotipo - ong oca/  # Logotipos institucionais da ONG
+- │   └── logotipo - parceiros/# Logotipos de parceiros
+- ├── CNAME                    # Arquivo de domínio personalizado (www.ongoca.org)
+- ├── LICENSE.txt              # Licença do projeto
+- ├── README.md                # Documentação técnica do projeto
+- └── index.html               # Arquivo principal (HTML, CSS e JS integrados)
+
 
 
 ## Tecnologias Utilizadas
