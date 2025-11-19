@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --primary-color: #2d7a3e;
   --secondary-color: #4caf50;
@@ -11,10 +12,54 @@
   --text-light: #666;
   --bg-light: #f5f5f5;
   --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
 }
+
+/* Modo Escuro */
+body.dark-mode {
+  --primary-color: #4caf50;
+  --secondary-color: #66bb6a;
+  --accent-color: #ffa726;
+  --text-dark: #e0e0e0;
+  --text-light: #b0b0b0;
+  --bg-light: #1a1a1a;
+  --white: #2d2d2d;
+  --shadow: rgba(255, 255, 255, 0.05);
+  --shadow-hover: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: #1e1e1e;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .carousel-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+body.dark-mode .modal {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+body.dark-mode .nav-links.mobile-active {
+  background: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode footer {
+  background: #0a0a0a;
+}
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--text-dark);
@@ -32,6 +77,7 @@ header {
   z-index: 1000;
   transition: all 0.3s ease;
 }
+
 nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -40,57 +86,69 @@ nav {
   align-items: center;
   padding: 1rem 2rem;
 }
+
 .logo {
   display: flex;
   align-items: center;
+  z-index: 1001;
 }
+
 .logo img {
-  height: 50px; /* ajuste conforme o tamanho do seu header */
+  height: 50px;
   width: auto;
   object-fit: contain;
 }
+
 .nav-links {
   display: flex;
   list-style: none;
   gap: 2rem;
   align-items: center;
 }
+
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 500;
   transition: color 0.3s;
 }
+
 .nav-links a:hover {
   color: var(--primary-color);
 }
+
 .dropdown {
   position: relative;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%; /* já encosta logo abaixo do botão */
+  top: 100%;
   left: 0;
   background: var(--white);
   min-width: 220px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 0.5rem 0;
-  z-index: 10; /* garante que o menu fica por cima de outros elementos */
+  z-index: 10;
 }
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 .dropdown-content a {
   display: block;
   padding: 0.7rem 1.5rem;
   color: var(--text-dark);
 }
+
 .dropdown-content a:hover {
   background: var(--bg-light);
   color: var(--primary-color);
 }
+
 .btn-donate {
   background: var(--accent-color);
   color: var(--white);
@@ -99,16 +157,94 @@ nav {
   font-weight: 600;
   transition: transform 0.3s;
 }
+
 .btn-donate:hover {
   transform: scale(1.05);
 }
+
 .mobile-menu {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 1001;
 }
 
-/* Hero Banner */
+/* Botão Dark Mode - Moderno e Animado */
+.dark-mode-toggle {
+  position: relative;
+  width: 60px;
+  height: 32px;
+  background: linear-gradient(135deg, #67e2bd 0%, #05854f 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  overflow: hidden;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.dark-mode-toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle .moon-icon,
+.dark-mode-toggle .sun-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.dark-mode-toggle .moon-icon {
+  right: 8px;
+  opacity: 0.7;
+}
+
+.dark-mode-toggle .sun-icon {
+  left: 8px;
+  opacity: 0;
+}
+
+/* Estado Dark Mode Ativo */
+body.dark-mode .dark-mode-toggle {
+  background: linear-gradient(135deg, #66f785 0%, #017019 100%);
+  box-shadow: 0 2px 8px rgb(54, 198, 255);
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  box-shadow: 0 4px 12px rgb(33, 255, 218);
+}
+
+body.dark-mode .dark-mode-toggle::before {
+  left: calc(100% - 28px);
+}
+
+body.dark-mode .dark-mode-toggle .moon-icon {
+  opacity: 0;
+}
+
+body.dark-mode .dark-mode-toggle .sun-icon {
+  opacity: 0.9;
+}
+
+/* Hero Banner / Carousel */
 #home {
   margin-top: 80px;
   position: relative;
@@ -117,7 +253,7 @@ nav {
 
 .carousel {
   position: relative;
-  height: 100vh; /* ocupa toda a tela */
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -136,17 +272,18 @@ nav {
 .carousel-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .carousel-overlay {
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));  <-- repensando ele, talvez em algumas situações funcione*/
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+  padding: 0 20px;
 }
 
 .carousel-content {
@@ -157,6 +294,7 @@ nav {
 .carousel-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .carousel-content p {
@@ -167,18 +305,19 @@ nav {
 .btn-primary {
   background: #0d9b3c;
   color: #fff;
-  padding: 16px 36px; /* aumenta altura e largura */
-  font-size: 1.1rem; /* texto maior */
-  font-weight: 600; /* texto mais forte */
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
   border-radius: 40px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(13, 155, 60, 0.4); /* leve brilho */
+  box-shadow: 0 4px 12px rgba(13, 155, 60, 0.4);
+  display: inline-block;
 }
 
 .btn-primary:hover {
   background: #32d362;
-  transform: translateY(-3px); /* efeito de destaque */
+  transform: translateY(-3px);
   box-shadow: 0 6px 18px rgba(13, 155, 60, 0.6);
 }
 
@@ -189,6 +328,7 @@ nav {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  z-index: 3;
 }
 
 .carousel-dot {
@@ -204,32 +344,16 @@ nav {
   background: #1cd803;
 }
 
-@media (max-width: 768px) {
-  .carousel {
-    height: 70vh; /* menor altura no mobile */
-  }
-
-  .carousel-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .carousel-content p {
-    font-size: 1rem;
-  }
-  .btn-primary {
-    padding: 12px 28px;
-    font-size: 1rem;
-  }
-}
-
 /* Seções Gerais */
 section {
   padding: 5rem 2rem;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .section-title {
   text-align: center;
   font-size: 2.5rem;
@@ -237,6 +361,7 @@ section {
   margin-bottom: 3rem;
   position: relative;
 }
+
 .section-title::after {
   content: "";
   display: block;
@@ -251,17 +376,20 @@ section {
 #sobre {
   background: var(--bg-light);
 }
+
 .sobre-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
 }
+
 .sobre-text {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-light);
 }
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -270,6 +398,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
+
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -285,6 +414,7 @@ section {
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .stat-card {
   background: var(--white);
   padding: 2rem;
@@ -293,20 +423,24 @@ section {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
+
 .stat-card:hover {
   transform: translateY(-10px);
 }
+
 .stat-icon {
   font-size: 3rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
+
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--accent-color);
   margin-bottom: 0.5rem;
 }
+
 .stat-label {
   font-size: 1.1rem;
   color: var(--text-light);
@@ -316,11 +450,13 @@ section {
 #servicos {
   background: var(--bg-light);
 }
+
 .servicos-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
+
 .servico-card {
   background: var(--white);
   padding: 2rem;
@@ -330,43 +466,50 @@ section {
   transition: all 0.3s;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
+
 .servico-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
 .servico-icon {
   font-size: 2.5rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
+
 .servico-titulo {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
 }
+
 .servico-desc {
   display: none;
   margin-top: 1rem;
   color: var(--text-light);
   font-size: 0.9rem;
 }
+
 .servico-card.active .servico-desc {
   display: block;
 }
+
 .btn-inscrever {
   display: inline-block;
   margin-top: 12px;
   padding: 10px 20px;
-  background-color: #057530; /* azul institucional */
+  background-color: #057530;
   color: #fff;
   text-decoration: none;
   border-radius: 20px;
   font-weight: 600;
   transition: 0.3s;
 }
+
 .btn-inscrever:hover {
-  background-color: #18ac50; /* tom mais escuro no hover */
+  background-color: #18ac50;
   transform: scale(1.05);
 }
 
@@ -377,6 +520,7 @@ section {
   gap: 3rem;
   margin-top: 2rem;
 }
+
 .ajudar-card {
   background: linear-gradient(
     135deg,
@@ -390,17 +534,21 @@ section {
   cursor: pointer;
   transition: transform 0.3s;
 }
+
 .ajudar-card:hover {
   transform: scale(1.05);
 }
+
 .ajudar-icon {
   font-size: 4rem;
   margin-bottom: 1.5rem;
 }
+
 .ajudar-card h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 .ajudar-card p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
@@ -410,20 +558,33 @@ section {
 #depoimentos {
   background: var(--bg-light);
 }
+
 .depoimentos-carousel {
   position: relative;
   overflow: hidden;
   padding: 2rem 0;
 }
+
 .depoimento-slide {
   display: none;
   text-align: center;
   padding: 2rem;
 }
+
 .depoimento-slide.active {
   display: block;
   animation: fadeIn 0.5s;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .depoimento-foto {
   width: 100px;
   height: 100px;
@@ -436,6 +597,7 @@ section {
   font-size: 3rem;
   color: var(--white);
 }
+
 .depoimento-texto {
   font-size: 1.2rem;
   font-style: italic;
@@ -445,11 +607,13 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
+
 .depoimento-autor {
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
+
 .depoimento-situacao {
   color: var(--text-light);
   font-size: 0.9rem;
@@ -461,12 +625,14 @@ section {
   position: relative;
   width: 100%;
 }
+
 .parceiros-track {
   display: flex;
   gap: 3rem;
-  width: max-content; /* garante que o flex se ajuste ao tamanho total */
+  width: max-content;
   animation: scroll 60s linear infinite;
 }
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -475,9 +641,10 @@ section {
     transform: translateX(-50%);
   }
 }
+
 .parceiro-logo {
-  min-width: 180px; /* aumentei um pouco o tamanho */
-  height: 100px; /* aumentei a altura */
+  min-width: 180px;
+  height: 100px;
   background: var(--white);
   border-radius: 10px;
   display: flex;
@@ -487,36 +654,40 @@ section {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Imagens das logos */
 .parceiro-logo img {
   max-width: 100%;
-  max-height: 100px; /* aumenta proporcionalmente ao card */
+  max-height: 100px;
   object-fit: contain;
-  filter: none; /* remove o cinza */
+  filter: none;
   transition: transform 0.3s ease;
 }
+
 .parceiro-logo img:hover {
-  transform: scale(1.05); /* efeito sutil de destaque ao passar o mouse */
+  transform: scale(1.05);
 }
 
 /* Contato */
 #contato {
   background: var(--bg-light);
 }
+
 .contato-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
+
 .form-group {
   margin-bottom: 1.5rem;
 }
+
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
   color: var(--text-dark);
 }
+
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -525,16 +696,20 @@ section {
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
   transition: border-color 0.3s;
+  font-size: 16px;
 }
+
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
 }
+
 .form-group textarea {
   resize: vertical;
   min-height: 120px;
 }
+
 .btn-submit {
   width: 100%;
   padding: 1rem;
@@ -547,9 +722,11 @@ section {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .btn-submit:hover {
   background: var(--secondary-color);
 }
+
 .mapa-container {
   height: 100%;
   min-height: 400px;
@@ -557,17 +734,21 @@ section {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .social-links {
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
+
 .social-icon {
   font-size: 2rem;
   color: var(--primary-color);
   transition: transform 0.3s;
 }
+
 .social-icon:hover {
   transform: scale(1.2);
   color: var(--accent-color);
@@ -579,6 +760,7 @@ footer {
   color: var(--white);
   padding: 3rem 2rem 1rem;
 }
+
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -587,13 +769,16 @@ footer {
   gap: 3rem;
   margin-bottom: 2rem;
 }
+
 .footer-section h3 {
   margin-bottom: 1rem;
   color: var(--secondary-color);
 }
+
 .footer-links {
   list-style: none;
 }
+
 .footer-links a {
   color: var(--white);
   text-decoration: none;
@@ -601,9 +786,11 @@ footer {
   margin-bottom: 0.5rem;
   transition: color 0.3s;
 }
+
 .footer-links a:hover {
   color: var(--accent-color);
 }
+
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
@@ -623,42 +810,46 @@ footer {
   z-index: 2000;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
+
 .modal.active {
   display: flex;
 }
+
 .modal-content {
   background: var(--white);
   padding: 2rem;
   border-radius: 15px;
-  max-width: 600px; /* aumentamos um pouco */
+  max-width: 600px;
   width: 90%;
-  max-height: 90vh; /* limita a altura para não ultrapassar a tela */
+  max-height: 90vh;
   position: relative;
   animation: slideDown 0.3s;
-  overflow-y: auto; /* evita cortar conteúdo */
+  overflow-y: auto;
 }
+
 .modal-content h2 {
   text-align: center;
-  margin-bottom: 20px; /* opcional, dá um espaçamento embaixo */
+  margin-bottom: 20px;
 }
 
-/* Estilizando a barra de rolagem do modal */
 .modal-content::-webkit-scrollbar {
-  width: 10px; /* largura da barra */
-  border-radius: 15px; /* arredonda as bordas da barra */
-}
-.modal-content::-webkit-scrollbar-track {
-  background: #f1f1f1; /* fundo da barra */
+  width: 10px;
   border-radius: 15px;
-}
-.modal-content::-webkit-scrollbar-thumb {
-  background: #ccc; /* cor do “polegar” da barra */
-  border-radius: 15px;
-  border: 2px solid #fff; /* cria um efeito de borda arredondada */
 }
 
-/* Para Firefox */
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 15px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 15px;
+  border: 2px solid #fff;
+}
+
 .modal-content {
   scrollbar-width: thin;
   scrollbar-color: #ccc #f1f1f1;
@@ -675,21 +866,23 @@ footer {
   }
 }
 
-/* Layout em duas colunas */
-.donation-container {
+.donation-container,
+.donation-container-vertical {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  flex-wrap: wrap; /* garante que no celular ele empilhe */
+  flex-wrap: wrap;
 }
 
-/* Cada coluna ocupa 50% no desktop */
+.donation-container-vertical {
+  flex-direction: column;
+}
+
 .donation-column {
   flex: 1;
-  min-width: 300px; /* impede quebra feia em telas pequenas */
+  min-width: 300px;
 }
 
-/* Blocos individuais */
 .donation-option {
   background: var(--bg-light);
   padding: 1.5rem;
@@ -697,166 +890,13 @@ footer {
   margin-bottom: 1rem;
   text-align: center;
 }
+
 .donation-option h3 {
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
-/* PIX container com layout em colunas */
-.pix-conteudo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  padding: 20px;
-  border: 2px solid #00bfa5; /* Verde PIX */
-  border-radius: 12px;
-  background-color: #fff;
-  transition: all 0.3s ease;
-}
-
-/* Efeito hover */
-.pix-conteudo:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 12px rgba(0, 191, 165, 0.3);
-}
-
-/* Imagem do QR Code */
-.pix-logo img {
-  width: 120px;
-  height: auto;
-  border-radius: 10px;
-  border: 1px solid #e0e0e0;
-}
-
-/* Texto ao lado */
-.pix-info {
-  flex: 1;
-  text-align: left;
-}
-.pix-info h3 {
-  color: #00bfa5;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.pix-key {
-  background: #f1fffc;
-  color: #00bfa5;
-  font-weight: bold;
-  padding: 6px 10px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-top: 5px;
-}
-.pix-legenda {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 8px;
-}
-
-/* Espaçamento geral */
-.pix-area {
-  margin-bottom: 20px;
-}
-
-/* Fechar modal */
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--text-light);
-}
-.modal-close:hover {
-  color: var(--text-dark);
-}
-
-/* Responsividade para celular */
-@media (max-width: 700px) {
-  .donation-container {
-    flex-direction: column;
-  }
-}
-
-/* Layout geral */
-.banco-conteudo {
-  display: flex;
-  align-items: center;
-  gap: 5px; /* diminuiu entre conteudo e foto */
-  padding: 15px;
-  border-radius: 12px;
-  background-color: #fff;
-  transition: all 0.3s ease;
-}
-
-/* Efeito ao passar o mouse */
-.banco-conteudo:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Logo */
-.banco-logo {
-  flex: 0 0 auto; /* não cresce nem encolhe, ocupa só o necessário */
-  display: flex;
-  align-items: center; /* centraliza verticalmente a imagem */
-  justify-content: center; /* centraliza horizontalmente */
-  margin: 0; /* remove margens extras */
-  padding: 0; /* remove padding */
-}
-.banco-logo img {
-  width: 130px; /* aumentou de 80px para 100px */
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-/* Informações */
-.banco-info {
-  flex: 1;
-}
-.banco-info h3 {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-  color: #333;
-}
-.banco-info p {
-  margin: 3px 0;
-  font-size: 0.95rem;
-}
-
-/* Cores e bordas específicas de cada banco */
-.banco-itau .banco-conteudo {
-  border: 2px solid #ff6600;
-}
-.banco-itau span {
-  color: #ff6600;
-  font-weight: bold;
-}
-.banco-santander .banco-conteudo {
-  border: 2px solid #e60000;
-}
-.banco-santander span {
-  color: #e60000;
-  font-weight: bold;
-}
-
-/* Espaçamento entre os bancos */
-.donation-option {
-  margin-bottom: 1px;
-}
-
-/* ======= Layout vertical ======= */
-.donation-container-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* ======= PIX com fundo degradê ======= */
+/* PIX */
 .pix-conteudo {
   display: flex;
   align-items: center;
@@ -868,12 +908,19 @@ footer {
   transition: all 0.3s ease;
   color: #fff;
 }
+
 .pix-conteudo:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(0, 191, 165, 0.4);
 }
 
-/* QR Code */
+.pix-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .pix-logo img {
   width: 130px;
   height: auto;
@@ -882,16 +929,17 @@ footer {
   padding: 8px;
 }
 
-/* Informações do PIX */
 .pix-info {
   flex: 1;
   text-align: left;
 }
+
 .pix-info h3 {
   font-size: 1.3rem;
   margin-bottom: 8px;
   color: #fff;
 }
+
 .pix-key {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
@@ -900,22 +948,92 @@ footer {
   border-radius: 6px;
   display: inline-block;
   margin-top: 5px;
+  word-break: break-all;
 }
+
 .pix-legenda {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);
   margin-top: 8px;
 }
 
-/* Responsividade */
-@media (max-width: 700px) {
-  .pix-conteudo {
-    flex-direction: column;
-    text-align: center;
-  }
-  .pix-logo img {
-    width: 160px;
-  }
+/* Bancos */
+.banco-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.banco-conteudo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.banco-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banco-logo img {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.banco-info {
+  flex: 1;
+}
+
+.banco-info h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.banco-info p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+}
+
+.banco-itau .banco-conteudo {
+  border: 2px solid #ff6600;
+}
+
+.banco-itau span {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.banco-santander .banco-conteudo {
+  border: 2px solid #e60000;
+}
+
+.banco-santander span {
+  color: #e60000;
+  font-weight: bold;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-light);
+  background: none;
+  border: none;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--text-dark);
 }
 
 /* WhatsApp Flutuante */
@@ -937,37 +1055,639 @@ footer {
   transition: transform 0.3s;
   z-index: 999;
 }
+
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
 
-/* Responsivo */
+/* Menu Mobile */
+.nav-links.mobile-active {
+  display: flex !important;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 0;
+  flex-direction: column;
+  background: #fff;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.nav-links.mobile-active .dropdown-content {
+  position: static;
+  box-shadow: none;
+}
+
+/* ========== RESPONSIVIDADE MOBILE ========== */
+
+/* Tablets e telas médias (até 968px) */
 @media (max-width: 968px) {
+  /* Menu mobile */
   .nav-links {
     display: none;
   }
+
   .mobile-menu {
     display: block;
   }
+
+  /* Dark Mode Toggle - ajuste para mobile */
+  .dark-mode-toggle {
+    width: 50px;
+    height: 28px;
+  }
+
+  .dark-mode-toggle::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .dark-mode-toggle .moon-icon,
+  .dark-mode-toggle .sun-icon {
+    font-size: 0.8rem;
+  }
+
+  body.dark-mode .dark-mode-toggle::before {
+    left: calc(100% - 24px);
+  }
+
+  /* Ajustes gerais */
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Carousel */
+  .carousel {
+    height: 70vh;
+  }
+
   .carousel-content h1 {
     font-size: 2rem;
   }
+
+  .carousel-content p {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+
+  /* Grids em 2 colunas */
   .sobre-content,
   .contato-grid,
   .ajudar-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .stats-grid,
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
   .servicos-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
+
+  /* Footer */
   .footer-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Cards ajustados */
+  .stat-card,
+  .servico-card {
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-icon {
+    font-size: 2.5rem;
+  }
+
+  /* Ajudar cards */
+  .ajudar-card {
+    padding: 2rem;
+  }
+
+  .ajudar-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .ajudar-icon {
+    font-size: 3rem;
+  }
+
+  /* Depoimentos */
+  .depoimento-texto {
+    font-size: 1.1rem;
+  }
+
+  /* Parceiros */
+  .parceiro-logo {
+    min-width: 140px;
+    height: 80px;
+  }
+
+  .parceiro-logo img {
+    max-height: 70px;
+  }
+
+  /* WhatsApp */
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    bottom: 20px;
+    right: 20px;
   }
 }
+
+/* Smartphones (até 600px) */
 @media (max-width: 600px) {
-  .stats-grid,
+  /* Header */
+  nav {
+    padding: 1rem 1rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  /* Seções */
+  section {
+    padding: 2.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-title::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  /* Carousel */
+  .carousel {
+    height: 60vh;
+  }
+
+  .carousel-content {
+    padding: 15px;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .carousel-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-primary {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .carousel-controls {
+    bottom: 20px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Sobre */
+  .sobre-text {
+    font-size: 1rem;
+  }
+
+  /* Stats - 1 coluna */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  /* Serviços - 1 coluna */
   .servicos-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .servico-card {
+    padding: 1.5rem;
+  }
+
+  .servico-icon {
+    font-size: 2rem;
+  }
+
+  .servico-titulo {
+    font-size: 1rem;
+  }
+
+  /* Ajudar */
+  .ajudar-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .ajudar-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .ajudar-card p {
+    font-size: 1rem;
+  }
+
+  .ajudar-icon {
+    font-size: 2.5rem;
+  }
+
+  /* Depoimentos */
+  .depoimento-slide {
+    padding: 1rem;
+  }
+
+  .depoimento-foto {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+
+  .depoimento-texto {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .depoimento-autor {
+    font-size: 1rem;
+  }
+
+  .depoimento-situacao {
+    font-size: 0.85rem;
+  }
+
+  /* Parceiros */
+  .parceiros-track {
+    gap: 2rem;
+  }
+
+  .parceiro-logo {
+    min-width: 120px;
+    height: 70px;
+    padding: 0.8rem;
+  }
+
+  .parceiro-logo img {
+    max-height: 60px;
+  }
+
+  /* Contato */
+  .mapa-container {
+    min-height: 300px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Evita zoom automático no iOS */
+  }
+
+  .btn-submit {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+
+  /* Social links */
+  .social-links {
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    gap: 1.5rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.95rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+    padding-top: 1.5rem;
+  }
+
+  /* Modal */
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    max-height: 85vh;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .modal-close {
+    font-size: 1.8rem;
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+
+  /* Doações */
+  .donation-container {
+    flex-direction: column;
+  }
+
+  .donation-column {
+    min-width: 100%;
+  }
+
+  .donation-option {
+    padding: 1.2rem;
+  }
+
+  .donation-option h3 {
+    font-size: 1.1rem;
+  }
+
+  /* PIX */
+  .pix-conteudo {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .pix-logo img {
+    width: 140px;
+  }
+
+  .pix-info {
+    text-align: center;
+  }
+
+  .pix-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .pix-key {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .pix-legenda {
+    font-size: 0.85rem;
+  }
+
+  /* Banco */
+  .banco-conteudo {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .banco-logo img {
+    width: 110px;
+  }
+
+  .banco-info {
+    text-align: center;
+  }
+
+  .banco-info h3 {
+    font-size: 1rem;
+  }
+
+  .banco-info p {
+    font-size: 0.9rem;
+  }
+
+  /* WhatsApp */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* Botões */
+  .btn-inscrever {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  .btn-donate {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smartphones pequenos (até 400px) */
+@media (max-width: 400px) {
+  /* Header */
+  .logo img {
+    height: 35px;
+  }
+
+  /* Seções */
+  section {
+    padding: 2rem 0.8rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  /* Carousel */
+  .carousel {
+    height: 50vh;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Cards */
+  .stat-card,
+  .servico-card,
+  .ajudar-card {
+    padding: 1.2rem;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .ajudar-card h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Depoimentos */
+  .depoimento-foto {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .depoimento-texto {
+    font-size: 0.95rem;
+  }
+
+  /* Parceiros */
+  .parceiro-logo {
+    min-width: 100px;
+    height: 60px;
+  }
+
+  .parceiro-logo img {
+    max-height: 50px;
+  }
+
+  /* Modal */
+  .modal-content {
+    padding: 1.2rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.3rem;
+  }
+
+  /* PIX e Bancos */
+  .pix-logo img {
+    width: 120px;
+  }
+
+  .banco-logo img {
+    width: 90px;
+  }
+
+  /* WhatsApp */
+  .whatsapp-float {
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Landscape em smartphones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .carousel {
+    height: 100vh;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .btn-primary {
+    padding: 10px 24px;
+  }
+
+  .carousel-controls {
+    bottom: 15px;
+  }
+}
+
+/* Menu mobile aberto - ajustes para telas pequenas */
+@media (max-width: 600px) {
+  .nav-links.mobile-active {
+    top: 70px;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links.mobile-active a {
+    font-size: 0.95rem;
+  }
+
+  .nav-links.mobile-active .btn-donate {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .nav-links.mobile-active .dropdown-content a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Ajustes para impressão */
+@media print {
+  header,
+  .whatsapp-float,
+  .carousel-controls,
+  .mobile-menu {
+    display: none !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  .modal {
+    display: none !important;
   }
 }
