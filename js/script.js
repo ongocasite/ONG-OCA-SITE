@@ -127,4 +127,48 @@ document.addEventListener("DOMContentLoaded", function () {
       header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
     }
   });
+
+  // Menu Mobile
+  const mobileMenuButton = document.querySelector(".mobile-menu");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (mobileMenuButton && navLinks) {
+    // Quando clicar no botão do menu mobile
+    mobileMenuButton.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-active");
+    });
+
+    // Fechar o menu mobile ao clicar em um link
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navLinks.classList.contains("mobile-active")) {
+          navLinks.classList.remove("mobile-active");
+        }
+      });
+    });
+  }
+
+  // ========== DARK MODE ==========
+  const darkModeToggle = document.getElementById("darkModeToggle");
+
+  // Verificar preferência salva no localStorage
+  const darkModePreference = localStorage.getItem("darkMode");
+
+  if (darkModePreference === "enabled") {
+    document.body.classList.add("dark-mode");
+  }
+
+  // Toggle ao clicar no botão
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      // Salvar preferência no localStorage
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+  }
 });
