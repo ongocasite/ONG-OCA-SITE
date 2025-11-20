@@ -71,858 +71,894 @@
       </nav>
     </header>
 
-    <!-- Hero Banner -->
-    <section id="home">
-      <div class="carousel">
-        <div class="carousel-slide active">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="assets/img/banners/desktop/transformar.webp"
-            />
-            <img
-              src="assets/img/banners/desktop/transformar.webp"
-              alt="Transformando vidas"
-              class="carousel-img"
-            />
-          </picture>
-          <div class="carousel-overlay">
-            <div class="carousel-content">
-              <h1>Transformando Vidas com Amor e Dedicação</h1>
+    <main>
+      <!-- Hero Banner -->
+      <section id="home">
+        <div class="carousel">
+          <div class="carousel-slide active">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="assets/img/banners/desktop/transformar.webp"
+              />
+              <img
+                src="assets/img/banners/desktop/transformar.webp"
+                alt="Transformando vidas"
+                class="carousel-img"
+              />
+            </picture>
+            <div class="carousel-overlay">
+              <div class="carousel-content">
+                <h1>Transformando Vidas com Amor e Dedicação</h1>
+                <p>
+                  Há mais de 20 anos promovendo inclusão social e reabilitação
+                </p>
+                <a href="#sobre" class="btn-primary">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide active">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="assets/img/banners/mobile/painel.png"
+                alt="painel oca"
+              />
+              <img
+                src="assets/img/banners/desktop/painel oca.png"
+                alt="painel oca"
+                class="carousel-img"
+              />
+            </picture>
+            <div class="carousel-overlay">
+              <div class="carousel-content">
+                <a
+                  href="https://www.sympla.com.br/evento/painel-oca-inclusao-e-neurodiversidade/3151322?share&fbclid=IwY2xjawOCbtdleHRuA2FlbQIxMABicmlkETBya2l4am9MejJrQmswRFdZc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgmJzcwa_t93fqqKK4qBIx0GTx3YbcLWywbhrzT4jeWtb8Fak7uyrhkWETjR_aem_HjYQQx8zob3KUDwRFazVGg&referrer=l.facebook.com&referrer=l.facebook.com&referrer=l.facebook.com&referrer=l.facebook.com"
+                  target="_blank"
+                  class="btn-primary"
+                  >Se Inscrever</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide active">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="assets/img/banners/mobile/rifa.png"
+              />
+              <img
+                src="assets/img/banners/desktop/rifa flamengo desktop.png"
+                alt="Juntos somos mais fortes"
+                class="carousel-img"
+              />
+            </picture>
+            <div class="carousel-overlay">
+              <div class="carousel-content">
+                <a
+                  href="https://wa.me/5521968181005"
+                  target="_blank"
+                  class="btn-primary"
+                  >COMPRA RIFA</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+          <span class="carousel-dot" onclick="goToSlide(1)"></span>
+          <span class="carousel-dot" onclick="goToSlide(2)"></span>
+        </div>
+      </section>
+
+      <!-- Sobre Nós -->
+      <section id="sobre">
+        <div class="container">
+          <h2 class="section-title">Sobre Nós</h2>
+          <div class="sobre-content">
+            <div class="sobre-text">
               <p>
-                Há mais de 20 anos promovendo inclusão social e reabilitação
+                A <strong>ONG OCA – Organização Cultural Alternativa</strong> é
+                uma entidade sem fins lucrativos que atua há mais de duas
+                décadas promovendo a inclusão social e o desenvolvimento
+                integral de pessoas com deficiência e suas famílias.
               </p>
-              <a href="#sobre" class="btn-primary">Saiba Mais</a>
+              <br />
+              <p>
+                Nossa missão é oferecer atendimento multidisciplinar de
+                qualidade, respeitando a dignidade humana e promovendo a
+                autonomia, independência e qualidade de vida dos nossos
+                assistidos.
+              </p>
+              <br />
+              <p>
+                Contamos com uma equipe de profissionais dedicados nas áreas de
+                Serviço Social, Psicologia, Fisioterapia, Fonoaudiologia,
+                Pedagogia e Psicopedagogia, além de programas de assistência
+                alimentar.
+              </p>
+            </div>
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/XgMqBmCmz_4"
+                title="Vídeo institucional da ONG OCA"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="carousel-slide active">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="assets/img/banners/mobile/painel.png"
-              alt="painel oca"
-            />
-            <img
-              src="assets/img/banners/desktop/painel oca.png"
-              alt="painel oca"
-              class="carousel-img"
-            />
-          </picture>
-          <div class="carousel-overlay">
-            <div class="carousel-content">
+      <!-- Resultados Sociais -->
+      <section id="resultados">
+        <div class="container">
+          <h2 class="section-title">Nosso Impacto Social</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-users"></i></div>
+              <div class="stat-number">5.000+</div>
+              <div class="stat-label">Famílias Atendidas</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-heart"></i></div>
+              <div class="stat-number">3.000+</div>
+              <div class="stat-label">Atendimentos em Reabilitação</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-hands-helping"></i></div>
+              <div class="stat-number">250+</div>
+              <div class="stat-label">Pessoas Atendidas na Pandemia</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Serviços -->
+      <section id="servicos">
+        <div class="container">
+          <h2 class="section-title">Nossos Serviços</h2>
+          <div class="servicos-grid">
+            <div class="servico-card" onclick="toggleServico(this)">
+              <div class="servico-icon">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <div class="servico-titulo">Serviço Social</div>
+              <div class="servico-desc">
+                Orientação e acompanhamento das famílias, garantindo acesso a
+                direitos e benefícios sociais.
+              </div>
+            </div>
+            <div class="servico-card" onclick="toggleServico(this)">
+              <div class="servico-icon"><i class="fas fa-brain"></i></div>
+              <div class="servico-titulo">Psicologia</div>
+              <div class="servico-desc">
+                Atendimento psicológico individual e em grupo, apoiando o
+                desenvolvimento emocional e social.
+              </div>
+            </div>
+            <div class="servico-card" onclick="toggleServico(this)">
+              <div class="servico-icon"><i class="fas fa-book-reader"></i></div>
+              <div class="servico-titulo">Psicopedagogia</div>
+              <div class="servico-desc">
+                Avaliação e intervenção nas dificuldades de aprendizagem,
+                promovendo o desenvolvimento cognitivo.
+              </div>
+            </div>
+            <div class="servico-card" onclick="toggleServico(this)">
+              <div class="servico-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="servico-titulo">Pedagogia</div>
+              <div class="servico-desc">
+                Estimulação precoce e atividades pedagógicas adaptadas às
+                necessidades individuais.
+              </div>
+            </div>
+            <div class="servico-card" onclick="toggleServico(this)">
+              <div class="servico-icon"><i class="fas fa-walking"></i></div>
+              <div class="servico-titulo">Fisioterapia</div>
+              <div class="servico-desc">
+                Reabilitação motora e prevenção de complicações, melhorando
+                mobilidade e independência.
+              </div>
+            </div>
+            <div class="servico-card" onclick="toggleServico(this)">
+              <div class="servico-icon"><i class="fas fa-comments"></i></div>
+              <div class="servico-titulo">Fonoaudiologia</div>
+              <div class="servico-desc">
+                Tratamento de distúrbios da fala, linguagem, audição e
+                deglutição.
+              </div>
+            </div>
+            <div class="servico-card" onclick="toggleServico(this)">
+              <div class="servico-icon"><i class="fas fa-utensils"></i></div>
+              <div class="servico-titulo">Assistência Alimentar</div>
+              <div class="servico-desc">
+                Fornecimento de cestas básicas e apoio nutricional para famílias
+                em situação de vulnerabilidade.
+              </div>
+            </div>
+            <div class="servico-card" onclick="toggleServico(this)">
+              <div class="servico-icon">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <div class="servico-titulo">INSCREVA-SE AQUI!</div>
               <a
-                href="https://www.sympla.com.br/evento/painel-oca-inclusao-e-neurodiversidade/3151322?share&fbclid=IwY2xjawOCbtdleHRuA2FlbQIxMABicmlkETBya2l4am9MejJrQmswRFdZc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgmJzcwa_t93fqqKK4qBIx0GTx3YbcLWywbhrzT4jeWtb8Fak7uyrhkWETjR_aem_HjYQQx8zob3KUDwRFazVGg&referrer=l.facebook.com&referrer=l.facebook.com&referrer=l.facebook.com&referrer=l.facebook.com"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfG1HtdZrjivnXZYi7dRva3sSpgQVHS3ZDFr-8o5d7_o_hIrQ/closedform"
+                target="_blank"
+                class="btn-inscrever"
+              >
+                Se inscrever
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quer Ajudar -->
+      <section id="ajudar">
+        <div class="container">
+          <h2 class="section-title">Quer Ajudar Quem Precisa?</h2>
+          <div class="ajudar-grid">
+            <div class="ajudar-card">
+              <div class="ajudar-icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h3>Seja um Voluntário</h3>
+              <p>Compartilhe seu tempo e talento conosco</p>
+              <a
+                href="https://www.atados.com.br/ong/organizacao-cultural-alternativa-1/vagas"
                 target="_blank"
                 class="btn-primary"
-                >Se Inscrever</a
               >
+                Quero Ser Voluntário
+              </a>
+            </div>
+            <div class="ajudar-card" onclick="openModal()">
+              <div class="ajudar-icon">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <h3>Seja um Doador</h3>
+              <p>Sua contribuição transforma vidas</p>
+              <div class="btn-primary">Fazer Doação</div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="carousel-slide active">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="assets/img/banners/mobile/rifa.png"
-            />
-            <img
-              src="assets/img/banners/desktop/rifa flamengo desktop.png"
-              alt="Juntos somos mais fortes"
-              class="carousel-img"
-            />
-          </picture>
-          <div class="carousel-overlay">
-            <div class="carousel-content">
-              <a
-                href="https://wa.me/5521968181005"
-                target="_blank"
-                class="btn-primary"
-                >COMPRA RIFA</a
-              >
+      <!-- Depoimentos -->
+      <section id="depoimentos">
+        <div class="container">
+          <h2 class="section-title">Depoimentos</h2>
+          <div class="depoimentos-carousel">
+            <div class="depoimento-slide active">
+              <div class="depoimento-foto">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="depoimento-texto">
+                "A ONG OCA mudou completamente a vida da minha filha. Hoje ela
+                tem autonomia e qualidade de vida que nunca imaginamos possível.
+                Somos eternamente gratos!"
+              </div>
+              <div class="depoimento-autor">Maria Silva</div>
+              <div class="depoimento-situacao">
+                Mãe de criança com Síndrome de Down
+              </div>
+            </div>
+            <div class="depoimento-slide">
+              <div class="depoimento-foto">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="depoimento-texto">
+                "O atendimento multidisciplinar que recebo aqui é fundamental
+                para meu desenvolvimento. A equipe é maravilhosa e sempre me
+                ajuda a superar meus desafios."
+              </div>
+              <div class="depoimento-autor">João Pedro</div>
+              <div class="depoimento-situacao">
+                Beneficiário - Paralisia Cerebral
+              </div>
+            </div>
+            <div class="depoimento-slide">
+              <div class="depoimento-foto">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="depoimento-texto">
+                "Durante a pandemia, a OCA não nos abandonou. Recebemos cestas
+                básicas e atendimento remoto. É um trabalho que vai além, com
+                muito amor e dedicação."
+              </div>
+              <div class="depoimento-autor">Ana Paula</div>
+              <div class="depoimento-situacao">
+                Mãe de beneficiário com Autismo
+              </div>
+            </div>
+            <div class="depoimento-slide">
+              <div class="depoimento-foto">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="depoimento-texto">
+                "A fisioterapia que faço na OCA me ajudou a recuperar movimentos
+                que achei que nunca mais teria. Hoje consigo andar com muito
+                mais independência!"
+              </div>
+              <div class="depoimento-autor">Carlos Eduardo</div>
+              <div class="depoimento-situacao">
+                Beneficiário - Deficiência Física
+              </div>
+            </div>
+            <div class="depoimento-slide">
+              <div class="depoimento-foto">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="depoimento-texto">
+                "O apoio psicológico que recebi aqui foi essencial para minha
+                família. Aprendemos a lidar melhor com as dificuldades e hoje
+                somos mais unidos e fortes."
+              </div>
+              <div class="depoimento-autor">Fernanda Costa</div>
+              <div class="depoimento-situacao">
+                Mãe de criança com Deficiência Intelectual
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <span
+                class="carousel-dot active"
+                onclick="goToDepoimento(0)"
+              ></span>
+              <span class="carousel-dot" onclick="goToDepoimento(1)"></span>
+              <span class="carousel-dot" onclick="goToDepoimento(2)"></span>
+              <span class="carousel-dot" onclick="goToDepoimento(3)"></span>
+              <span class="carousel-dot" onclick="goToDepoimento(4)"></span>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="carousel-controls">
-        <span class="carousel-dot active" onclick="goToSlide(0)"></span>
-        <span class="carousel-dot" onclick="goToSlide(1)"></span>
-        <span class="carousel-dot" onclick="goToSlide(2)"></span>
-      </div>
-    </section>
+      <!-- Parceiros -->
+      <section id="parceiros">
+        <div class="container">
+          <h2 class="section-title">Nossos Parceiros</h2>
+          <div class="parceiros-carousel">
+            <div class="parceiros-track">
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/Atados.webp"
+                  alt="Empresa Atados"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/ASC logo.webp"
+                  alt="Empresa ASC contabilidade"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/auris.webp"
+                  alt="Empresa auris ideias digitais"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/biblioteca.webp"
+                  alt="Empresa biblioteca parque rocihna C4"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/parque.webp"
+                  alt="Empresa parque shanghai"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/burguer.webp"
+                  alt="Empresa be burger"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/shopping.webp"
+                  alt="Empresa shopping via brasil"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/bar.webp"
+                  alt="Empresa bar da portuguesa"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/dhl.webp"
+                  alt="Empresa DHL"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/dia de turista.webp"
+                  alt="Empresa dia do turista"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/flamengo.webp"
+                  alt="Empresa flamengo"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/rio-solidario.webp"
+                  alt="Empresa rio solidário"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/yduqs.webp"
+                  alt="Empresa yduqs"
+                />
+              </div>
 
-    <!-- Sobre Nós -->
-    <section id="sobre">
-      <div class="container">
-        <h2 class="section-title">Sobre Nós</h2>
-        <div class="sobre-content">
-          <div class="sobre-text">
+              <!-- segunda lista (duplicada para looping) -->
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/Atados.webp"
+                  alt="Empresa Atados"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/ASC logo.webp"
+                  alt="Empresa ASC contabilidade"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/auris.webp"
+                  alt="Empresa auris ideias digitais"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/biblioteca.webp"
+                  alt="Empresa biblioteca parque rocihna C4"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/parque.webp"
+                  alt="Empresa parque shanghai"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/burguer.webp"
+                  alt="Empresa be burger"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/shopping.webp"
+                  alt="Empresa shopping via brasil"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/bar.webp"
+                  alt="Empresa bar da portuguesa"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/dhl.webp"
+                  alt="Empresa DHL"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/dia de turista.webp"
+                  alt="Empresa dia do turista"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/flamengo.webp"
+                  alt="Empresa flamengo"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/rio-solidario.webp"
+                  alt="Empresa rio solidário"
+                />
+              </div>
+              <div class="parceiro-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - parceiros/yduqs.webp"
+                  alt="Empresa yduqs"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transparência -->
+      <section id="transparencia">
+        <div class="container">
+          <h2 class="section-title">Transparência</h2>
+          <div
+            class="sobre-text"
+            style="text-align: center; max-width: 800px; margin: 0 auto"
+          >
             <p>
-              A <strong>ONG OCA – Organização Cultural Alternativa</strong> é
-              uma entidade sem fins lucrativos que atua há mais de duas décadas
-              promovendo a inclusão social e o desenvolvimento integral de
-              pessoas com deficiência e suas famílias.
+              Acreditamos na transparência como pilar fundamental de nossa
+              gestão. Aqui você encontra nossos relatórios financeiros,
+              prestação de contas e documentos institucionais.
             </p>
             <br />
-            <p>
-              Nossa missão é oferecer atendimento multidisciplinar de qualidade,
-              respeitando a dignidade humana e promovendo a autonomia,
-              independência e qualidade de vida dos nossos assistidos.
-            </p>
-            <br />
-            <p>
-              Contamos com uma equipe de profissionais dedicados nas áreas de
-              Serviço Social, Psicologia, Fisioterapia, Fonoaudiologia,
-              Pedagogia e Psicopedagogia, além de programas de assistência
-              alimentar.
-            </p>
-          </div>
-          <div class="video-container">
-            <iframe
-              src="https://drive.google.com/file/d/1b8Cv03juPwNv9nywYwC3zy81hbFphPtB/preview"
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-            >
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resultados Sociais -->
-    <section id="resultados">
-      <div class="container">
-        <h2 class="section-title">Nosso Impacto Social</h2>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fas fa-users"></i></div>
-            <div class="stat-number">5.000+</div>
-            <div class="stat-label">Famílias Atendidas</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fas fa-heart"></i></div>
-            <div class="stat-number">3.000+</div>
-            <div class="stat-label">Atendimentos em Reabilitação</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i class="fas fa-hands-helping"></i></div>
-            <div class="stat-number">250+</div>
-            <div class="stat-label">Pessoas Atendidas na Pandemia</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Serviços -->
-    <section id="servicos">
-      <div class="container">
-        <h2 class="section-title">Nossos Serviços</h2>
-        <div class="servicos-grid">
-          <div class="servico-card" onclick="toggleServico(this)">
-            <div class="servico-icon"><i class="fas fa-user-friends"></i></div>
-            <div class="servico-titulo">Serviço Social</div>
-            <div class="servico-desc">
-              Orientação e acompanhamento das famílias, garantindo acesso a
-              direitos e benefícios sociais.
-            </div>
-          </div>
-          <div class="servico-card" onclick="toggleServico(this)">
-            <div class="servico-icon"><i class="fas fa-brain"></i></div>
-            <div class="servico-titulo">Psicologia</div>
-            <div class="servico-desc">
-              Atendimento psicológico individual e em grupo, apoiando o
-              desenvolvimento emocional e social.
-            </div>
-          </div>
-          <div class="servico-card" onclick="toggleServico(this)">
-            <div class="servico-icon"><i class="fas fa-book-reader"></i></div>
-            <div class="servico-titulo">Psicopedagogia</div>
-            <div class="servico-desc">
-              Avaliação e intervenção nas dificuldades de aprendizagem,
-              promovendo o desenvolvimento cognitivo.
-            </div>
-          </div>
-          <div class="servico-card" onclick="toggleServico(this)">
-            <div class="servico-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="servico-titulo">Pedagogia</div>
-            <div class="servico-desc">
-              Estimulação precoce e atividades pedagógicas adaptadas às
-              necessidades individuais.
-            </div>
-          </div>
-          <div class="servico-card" onclick="toggleServico(this)">
-            <div class="servico-icon"><i class="fas fa-walking"></i></div>
-            <div class="servico-titulo">Fisioterapia</div>
-            <div class="servico-desc">
-              Reabilitação motora e prevenção de complicações, melhorando
-              mobilidade e independência.
-            </div>
-          </div>
-          <div class="servico-card" onclick="toggleServico(this)">
-            <div class="servico-icon"><i class="fas fa-comments"></i></div>
-            <div class="servico-titulo">Fonoaudiologia</div>
-            <div class="servico-desc">
-              Tratamento de distúrbios da fala, linguagem, audição e deglutição.
-            </div>
-          </div>
-          <div class="servico-card" onclick="toggleServico(this)">
-            <div class="servico-icon"><i class="fas fa-utensils"></i></div>
-            <div class="servico-titulo">Assistência Alimentar</div>
-            <div class="servico-desc">
-              Fornecimento de cestas básicas e apoio nutricional para famílias
-              em situação de vulnerabilidade.
-            </div>
-          </div>
-          <div class="servico-card" onclick="toggleServico(this)">
-            <div class="servico-icon">
-              <i class="fas fa-clipboard-list"></i>
-            </div>
-            <div class="servico-titulo">INSCREVA-SE AQUI!</div>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfG1HtdZrjivnXZYi7dRva3sSpgQVHS3ZDFr-8o5d7_o_hIrQ/closedform"
+              href="https://drive.google.com/file/d/17_yuA7_wj0Nh1dciM3X1CRu6ej1O3stS/view"
               target="_blank"
-              class="btn-inscrever"
+              class="btn-primary"
             >
-              Se inscrever
+              Ver Documentos
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Quer Ajudar -->
-    <section id="ajudar">
-      <div class="container">
-        <h2 class="section-title">Quer Ajudar Quem Precisa?</h2>
-        <div class="ajudar-grid">
-          <div class="ajudar-card">
-            <div class="ajudar-icon"><i class="fas fa-hands-helping"></i></div>
-            <h3>Seja um Voluntário</h3>
-            <p>Compartilhe seu tempo e talento conosco</p>
-            <a
-              href="https://www.atados.com.br/ong/organizacao-cultural-alternativa-1/vagas"
-              target="_blank"
-              class="btn-primary"
+      <!-- Blog -->
+      <section id="blog" style="background: var(--bg-light)">
+        <div class="container">
+          <h2 class="section-title">Blog</h2>
+          <div class="stats-grid">
+            <div class="stat-card" style="text-align: left">
+              <div class="stat-icon" style="font-size: 2rem">
+                <i class="fas fa-newspaper"></i>
+              </div>
+              <h3 style="color: var(--primary-color); margin-bottom: 1rem">
+                Últimas Notícias
+              </h3>
+              <p style="color: var(--text-light)">
+                Acompanhe nossas atividades, eventos e novidades.
+              </p>
+              <div
+                class="btn-primary"
+                style="
+                  margin-top: 1.5rem;
+                  padding: 0.7rem 1.5rem;
+                  font-size: 0.9rem;
+                "
+              >
+                Acessar Blog
+              </div>
+            </div>
+            <div class="stat-card" style="text-align: left">
+              <div class="stat-icon" style="font-size: 2rem">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h3 style="color: var(--primary-color); margin-bottom: 1rem">
+                Próximos Eventos
+              </h3>
+              <p style="color: var(--text-light)">
+                Fique por dentro da nossa agenda de atividades.
+              </p>
+              <div
+                class="btn-primary"
+                style="
+                  margin-top: 1.5rem;
+                  padding: 0.7rem 1.5rem;
+                  font-size: 0.9rem;
+                "
+              >
+                Ver Eventos
+              </div>
+            </div>
+            <div class="stat-card" style="text-align: left">
+              <div class="stat-icon" style="font-size: 2rem">
+                <i class="fas fa-images"></i>
+              </div>
+              <h3 style="color: var(--primary-color); margin-bottom: 1rem">
+                Galeria de Fotos
+              </h3>
+              <p style="color: var(--text-light)">
+                Momentos especiais da nossa instituição.
+              </p>
+              <div
+                class="btn-primary"
+                style="
+                  margin-top: 1.5rem;
+                  padding: 0.7rem 1.5rem;
+                  font-size: 0.9rem;
+                "
+              >
+                Ver Galeria
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="container">
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <div style="max-width: 800px; margin: 0 auto">
+            <div
+              class="faq-item"
+              style="
+                margin-bottom: 1.5rem;
+                background: var(--bg-light);
+                padding: 1.5rem;
+                border-radius: 10px;
+                cursor: pointer;
+              "
+              onclick="toggleFaq(this)"
             >
-              Quero Ser Voluntário
+              <h3
+                style="
+                  color: var(--primary-color);
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                Como posso fazer uma doação?
+                <i class="fas fa-chevron-down"></i>
+              </h3>
+              <p
+                style="
+                  display: none;
+                  color: var(--text-light);
+                  margin-top: 1rem;
+                "
+              >
+                Você pode fazer doações via PIX, transferência bancária ou
+                diretamente em nossa sede. Clique no botão "Doe Aqui" para ver
+                todas as opções disponíveis.
+              </p>
+            </div>
+            <div
+              class="faq-item"
+              style="
+                margin-bottom: 1.5rem;
+                background: var(--bg-light);
+                padding: 1.5rem;
+                border-radius: 10px;
+                cursor: pointer;
+              "
+              onclick="toggleFaq(this)"
+            >
+              <h3
+                style="
+                  color: var(--primary-color);
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                Quem pode ser atendido pela ONG?
+                <i class="fas fa-chevron-down"></i>
+              </h3>
+              <p
+                style="
+                  display: none;
+                  color: var(--text-light);
+                  margin-top: 1rem;
+                "
+              >
+                Atendemos crianças, adolescentes e adultos com deficiência
+                física, intelectual, múltipla ou transtornos do espectro
+                autista, além de suas famílias.
+              </p>
+            </div>
+            <div
+              class="faq-item"
+              style="
+                margin-bottom: 1.5rem;
+                background: var(--bg-light);
+                padding: 1.5rem;
+                border-radius: 10px;
+                cursor: pointer;
+              "
+              onclick="toggleFaq(this)"
+            >
+              <h3
+                style="
+                  color: var(--primary-color);
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                Como me tornar voluntário?
+                <i class="fas fa-chevron-down"></i>
+              </h3>
+              <p
+                style="
+                  display: none;
+                  color: var(--text-light);
+                  margin-top: 1rem;
+                "
+              >
+                Clique em "Seja um Voluntário", preencha o formulário e nossa
+                equipe entrará em contato para apresentar as oportunidades
+                disponíveis.
+              </p>
+            </div>
+            <div
+              class="faq-item"
+              style="
+                margin-bottom: 1.5rem;
+                background: var(--bg-light);
+                padding: 1.5rem;
+                border-radius: 10px;
+                cursor: pointer;
+              "
+              onclick="toggleFaq(this)"
+            >
+              <h3
+                style="
+                  color: var(--primary-color);
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                Os atendimentos são gratuitos?
+                <i class="fas fa-chevron-down"></i>
+              </h3>
+              <p
+                style="
+                  display: none;
+                  color: var(--text-light);
+                  margin-top: 1rem;
+                "
+              >
+                Sim, todos os nossos atendimentos são 100% gratuitos, mantidos
+                através de doações e parcerias.
+              </p>
+            </div>
+            <div
+              class="faq-item"
+              style="
+                margin-bottom: 1.5rem;
+                background: var(--bg-light);
+                padding: 1.5rem;
+                border-radius: 10px;
+                cursor: pointer;
+              "
+              onclick="toggleFaq(this)"
+            >
+              <h3
+                style="
+                  color: var(--primary-color);
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                Onde a ONG está localizada?
+                <i class="fas fa-chevron-down"></i>
+              </h3>
+              <p
+                style="
+                  display: none;
+                  color: var(--text-light);
+                  margin-top: 1rem;
+                "
+              >
+                Estamos localizados em Penha, Rio de Janeiro. Veja nossa
+                localização exata na seção de Contato abaixo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato">
+        <div class="container">
+          <h2 class="section-title">Entre em Contato</h2>
+          <div class="contato-grid">
+            <div>
+              <form onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                  <label for="nome">Nome Completo</label>
+                  <input id="nome" type="text" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input id="email" type="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="telefone">Telefone</label>
+                  <input id="telefone" type="tel" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="mensagem">Mensagem</label>
+                  <textarea id="mensagem" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+            <div class="mapa-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.2343609818988!2d-43.278222190143595!3d-22.841803795180535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997be90803d50b%3A0xf878d83a54048a74!2sOCA%20-%20Organiza%C3%A7%C3%A3o%20Cultural%20Alternativa!5e0!3m2!1spt-BR!2sbr!4v1759712183254!5m2!1spt-BR!2sbr"
+                title="Mapa com a localização da ONG OCA"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/ong.oca/"
+              class="social-icon"
+              target="_blank"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/OcaOrganizacaoCulturalAlternativa"
+              class="social-icon"
+              target="_blank"
+              title="Facebook"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCbrkYJ_qTBHTwp6wUtE3Z9Q"
+              class="social-icon"
+              target="_blank"
+              title="Youtube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href=" https://www.linkedin.com/company/ong-oca"
+              class="social-icon"
+              target="_blank"
+              title="Linkedin"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://linktr.ee/ong_oca?fbclid=PAZXh0bgNhZW0CMTEAAaeqZY81R4wUNwn6cy_ko2g1Nwk_05fRMsLnIL_nprdhHYEXCpGj2VNJ9LO0RA_aem_tLJy7cSCbrm7SdWsFrXuAQ"
+              class="social-icon"
+              target="_blank"
+              title="Linktree"
+            >
+              <i class="fas fa-tree"></i>
             </a>
           </div>
-          <div class="ajudar-card" onclick="openModal()">
-            <div class="ajudar-icon">
-              <i class="fas fa-hand-holding-heart"></i>
-            </div>
-            <h3>Seja um Doador</h3>
-            <p>Sua contribuição transforma vidas</p>
-            <div class="btn-primary">Fazer Doação</div>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section id="depoimentos">
-      <div class="container">
-        <h2 class="section-title">Depoimentos</h2>
-        <div class="depoimentos-carousel">
-          <div class="depoimento-slide active">
-            <div class="depoimento-foto">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="depoimento-texto">
-              "A ONG OCA mudou completamente a vida da minha filha. Hoje ela tem
-              autonomia e qualidade de vida que nunca imaginamos possível. Somos
-              eternamente gratos!"
-            </div>
-            <div class="depoimento-autor">Maria Silva</div>
-            <div class="depoimento-situacao">
-              Mãe de criança com Síndrome de Down
-            </div>
-          </div>
-          <div class="depoimento-slide">
-            <div class="depoimento-foto">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="depoimento-texto">
-              "O atendimento multidisciplinar que recebo aqui é fundamental para
-              meu desenvolvimento. A equipe é maravilhosa e sempre me ajuda a
-              superar meus desafios."
-            </div>
-            <div class="depoimento-autor">João Pedro</div>
-            <div class="depoimento-situacao">
-              Beneficiário - Paralisia Cerebral
-            </div>
-          </div>
-          <div class="depoimento-slide">
-            <div class="depoimento-foto">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="depoimento-texto">
-              "Durante a pandemia, a OCA não nos abandonou. Recebemos cestas
-              básicas e atendimento remoto. É um trabalho que vai além, com
-              muito amor e dedicação."
-            </div>
-            <div class="depoimento-autor">Ana Paula</div>
-            <div class="depoimento-situacao">
-              Mãe de beneficiário com Autismo
-            </div>
-          </div>
-          <div class="depoimento-slide">
-            <div class="depoimento-foto">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="depoimento-texto">
-              "A fisioterapia que faço na OCA me ajudou a recuperar movimentos
-              que achei que nunca mais teria. Hoje consigo andar com muito mais
-              independência!"
-            </div>
-            <div class="depoimento-autor">Carlos Eduardo</div>
-            <div class="depoimento-situacao">
-              Beneficiário - Deficiência Física
-            </div>
-          </div>
-          <div class="depoimento-slide">
-            <div class="depoimento-foto">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="depoimento-texto">
-              "O apoio psicológico que recebi aqui foi essencial para minha
-              família. Aprendemos a lidar melhor com as dificuldades e hoje
-              somos mais unidos e fortes."
-            </div>
-            <div class="depoimento-autor">Fernanda Costa</div>
-            <div class="depoimento-situacao">
-              Mãe de criança com Deficiência Intelectual
-            </div>
-          </div>
-          <div class="carousel-controls">
-            <span
-              class="carousel-dot active"
-              onclick="goToDepoimento(0)"
-            ></span>
-            <span class="carousel-dot" onclick="goToDepoimento(1)"></span>
-            <span class="carousel-dot" onclick="goToDepoimento(2)"></span>
-            <span class="carousel-dot" onclick="goToDepoimento(3)"></span>
-            <span class="carousel-dot" onclick="goToDepoimento(4)"></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Parceiros -->
-    <section id="parceiros">
-      <div class="container">
-        <h2 class="section-title">Nossos Parceiros</h2>
-        <div class="parceiros-carousel">
-          <div class="parceiros-track">
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/Atados.webp"
-                alt="Empresa Atados"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/ASC logo.webp"
-                alt="Empresa ASC contabilidade"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/auris.webp"
-                alt="Empresa auris ideias digitais"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/biblioteca.webp"
-                alt="Empresa biblioteca parque rocihna C4"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/parque.webp"
-                alt="Empresa parque shanghai"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/burguer.webp"
-                alt="Empresa be burger"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/shopping.webp"
-                alt="Empresa shopping via brasil"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/bar.webp"
-                alt="Empresa bar da portuguesa"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/dhl.webp"
-                alt="Empresa DHL"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/dia de turista.webp"
-                alt="Empresa dia do turista"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/flamengo.webp"
-                alt="Empresa flamengo"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/rio-solidario.webp"
-                alt="Empresa rio solidário"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/yduqs.webp"
-                alt="Empresa yduqs"
-              />
-            </div>
-
-            <!-- segunda lista (duplicada para looping) -->
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/Atados.webp"
-                alt="Empresa Atados"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/ASC logo.webp"
-                alt="Empresa ASC contabilidade"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/auris.webp"
-                alt="Empresa auris ideias digitais"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/biblioteca.webp"
-                alt="Empresa biblioteca parque rocihna C4"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/parque.webp"
-                alt="Empresa parque shanghai"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/burguer.webp"
-                alt="Empresa be burger"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/shopping.webp"
-                alt="Empresa shopping via brasil"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/bar.webp"
-                alt="Empresa bar da portuguesa"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/dhl.webp"
-                alt="Empresa DHL"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/dia de turista.webp"
-                alt="Empresa dia do turista"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/flamengo.webp"
-                alt="Empresa flamengo"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/rio-solidario.webp"
-                alt="Empresa rio solidário"
-              />
-            </div>
-            <div class="parceiro-logo">
-              <img
-                src="assets/img/logotipos/logotipo - parceiros/yduqs.webp"
-                alt="Empresa yduqs"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Transparência -->
-    <section id="transparencia">
-      <div class="container">
-        <h2 class="section-title">Transparência</h2>
-        <div
-          class="sobre-text"
-          style="text-align: center; max-width: 800px; margin: 0 auto"
-        >
-          <p>
-            Acreditamos na transparência como pilar fundamental de nossa gestão.
-            Aqui você encontra nossos relatórios financeiros, prestação de
-            contas e documentos institucionais.
-          </p>
-          <br />
-          <a
-            href="https://drive.google.com/file/d/17_yuA7_wj0Nh1dciM3X1CRu6ej1O3stS/view"
-            target="_blank"
-            class="btn-primary"
-          >
-            Ver Documentos
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog -->
-    <section id="blog" style="background: var(--bg-light)">
-      <div class="container">
-        <h2 class="section-title">Blog</h2>
-        <div class="stats-grid">
-          <div class="stat-card" style="text-align: left">
-            <div class="stat-icon" style="font-size: 2rem">
-              <i class="fas fa-newspaper"></i>
-            </div>
-            <h3 style="color: var(--primary-color); margin-bottom: 1rem">
-              Últimas Notícias
-            </h3>
-            <p style="color: var(--text-light)">
-              Acompanhe nossas atividades, eventos e novidades.
-            </p>
-            <div
-              class="btn-primary"
-              style="
-                margin-top: 1.5rem;
-                padding: 0.7rem 1.5rem;
-                font-size: 0.9rem;
-              "
-            >
-              Acessar Blog
-            </div>
-          </div>
-          <div class="stat-card" style="text-align: left">
-            <div class="stat-icon" style="font-size: 2rem">
-              <i class="fas fa-calendar-alt"></i>
-            </div>
-            <h3 style="color: var(--primary-color); margin-bottom: 1rem">
-              Próximos Eventos
-            </h3>
-            <p style="color: var(--text-light)">
-              Fique por dentro da nossa agenda de atividades.
-            </p>
-            <div
-              class="btn-primary"
-              style="
-                margin-top: 1.5rem;
-                padding: 0.7rem 1.5rem;
-                font-size: 0.9rem;
-              "
-            >
-              Ver Eventos
-            </div>
-          </div>
-          <div class="stat-card" style="text-align: left">
-            <div class="stat-icon" style="font-size: 2rem">
-              <i class="fas fa-images"></i>
-            </div>
-            <h3 style="color: var(--primary-color); margin-bottom: 1rem">
-              Galeria de Fotos
-            </h3>
-            <p style="color: var(--text-light)">
-              Momentos especiais da nossa instituição.
-            </p>
-            <div
-              class="btn-primary"
-              style="
-                margin-top: 1.5rem;
-                padding: 0.7rem 1.5rem;
-                font-size: 0.9rem;
-              "
-            >
-              Ver Galeria
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <h2 class="section-title">Perguntas Frequentes</h2>
-        <div style="max-width: 800px; margin: 0 auto">
-          <div
-            class="faq-item"
-            style="
-              margin-bottom: 1.5rem;
-              background: var(--bg-light);
-              padding: 1.5rem;
-              border-radius: 10px;
-              cursor: pointer;
-            "
-            onclick="toggleFaq(this)"
-          >
-            <h3
-              style="
-                color: var(--primary-color);
-                margin-bottom: 0.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              "
-            >
-              Como posso fazer uma doação?
-              <i class="fas fa-chevron-down"></i>
-            </h3>
-            <p
-              style="display: none; color: var(--text-light); margin-top: 1rem"
-            >
-              Você pode fazer doações via PIX, transferência bancária ou
-              diretamente em nossa sede. Clique no botão "Doe Aqui" para ver
-              todas as opções disponíveis.
-            </p>
-          </div>
-          <div
-            class="faq-item"
-            style="
-              margin-bottom: 1.5rem;
-              background: var(--bg-light);
-              padding: 1.5rem;
-              border-radius: 10px;
-              cursor: pointer;
-            "
-            onclick="toggleFaq(this)"
-          >
-            <h3
-              style="
-                color: var(--primary-color);
-                margin-bottom: 0.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              "
-            >
-              Quem pode ser atendido pela ONG?
-              <i class="fas fa-chevron-down"></i>
-            </h3>
-            <p
-              style="display: none; color: var(--text-light); margin-top: 1rem"
-            >
-              Atendemos crianças, adolescentes e adultos com deficiência física,
-              intelectual, múltipla ou transtornos do espectro autista, além de
-              suas famílias.
-            </p>
-          </div>
-          <div
-            class="faq-item"
-            style="
-              margin-bottom: 1.5rem;
-              background: var(--bg-light);
-              padding: 1.5rem;
-              border-radius: 10px;
-              cursor: pointer;
-            "
-            onclick="toggleFaq(this)"
-          >
-            <h3
-              style="
-                color: var(--primary-color);
-                margin-bottom: 0.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              "
-            >
-              Como me tornar voluntário?
-              <i class="fas fa-chevron-down"></i>
-            </h3>
-            <p
-              style="display: none; color: var(--text-light); margin-top: 1rem"
-            >
-              Clique em "Seja um Voluntário", preencha o formulário e nossa
-              equipe entrará em contato para apresentar as oportunidades
-              disponíveis.
-            </p>
-          </div>
-          <div
-            class="faq-item"
-            style="
-              margin-bottom: 1.5rem;
-              background: var(--bg-light);
-              padding: 1.5rem;
-              border-radius: 10px;
-              cursor: pointer;
-            "
-            onclick="toggleFaq(this)"
-          >
-            <h3
-              style="
-                color: var(--primary-color);
-                margin-bottom: 0.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              "
-            >
-              Os atendimentos são gratuitos?
-              <i class="fas fa-chevron-down"></i>
-            </h3>
-            <p
-              style="display: none; color: var(--text-light); margin-top: 1rem"
-            >
-              Sim, todos os nossos atendimentos são 100% gratuitos, mantidos
-              através de doações e parcerias.
-            </p>
-          </div>
-          <div
-            class="faq-item"
-            style="
-              margin-bottom: 1.5rem;
-              background: var(--bg-light);
-              padding: 1.5rem;
-              border-radius: 10px;
-              cursor: pointer;
-            "
-            onclick="toggleFaq(this)"
-          >
-            <h3
-              style="
-                color: var(--primary-color);
-                margin-bottom: 0.5rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              "
-            >
-              Onde a ONG está localizada?
-              <i class="fas fa-chevron-down"></i>
-            </h3>
-            <p
-              style="display: none; color: var(--text-light); margin-top: 1rem"
-            >
-              Estamos localizados em Penha, Rio de Janeiro. Veja nossa
-              localização exata na seção de Contato abaixo.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato">
-      <div class="container">
-        <h2 class="section-title">Entre em Contato</h2>
-        <div class="contato-grid">
-          <div>
-            <form onsubmit="handleSubmit(event)">
-              <div class="form-group">
-                <label>Nome Completo</label>
-                <input type="text" required />
-              </div>
-              <div class="form-group">
-                <label>E-mail</label>
-                <input type="email" required />
-              </div>
-              <div class="form-group">
-                <label>Telefone</label>
-                <input type="tel" required />
-              </div>
-              <div class="form-group">
-                <label>Mensagem</label>
-                <textarea required></textarea>
-              </div>
-              <button type="submit" class="btn-submit">Enviar Mensagem</button>
-            </form>
-          </div>
-          <div class="mapa-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.2343609818988!2d-43.278222190143595!3d-22.841803795180535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997be90803d50b%3A0xf878d83a54048a74!2sOCA%20-%20Organiza%C3%A7%C3%A3o%20Cultural%20Alternativa!5e0!3m2!1spt-BR!2sbr!4v1759712183254!5m2!1spt-BR!2sbr"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-        <div class="social-links">
-          <a
-            href="https://www.instagram.com/ong.oca/"
-            class="social-icon"
-            target="_blank"
-            title="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/OcaOrganizacaoCulturalAlternativa"
-            class="social-icon"
-            target="_blank"
-            title="Facebook"
-          >
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCbrkYJ_qTBHTwp6wUtE3Z9Q"
-            class="social-icon"
-            target="_blank"
-            title="Youtube"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a
-            href=" https://www.linkedin.com/company/ong-oca"
-            class="social-icon"
-            target="_blank"
-            title="Linkedin"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://linktr.ee/ong_oca?fbclid=PAZXh0bgNhZW0CMTEAAaeqZY81R4wUNwn6cy_ko2g1Nwk_05fRMsLnIL_nprdhHYEXCpGj2VNJ9LO0RA_aem_tLJy7cSCbrm7SdWsFrXuAQ"
-            class="social-icon"
-            target="_blank"
-            title="Linktree"
-          >
-            <i class="fas fa-tree"></i>
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -1080,6 +1116,7 @@
       href="https://wa.me/5521968181005"
       target="_blank"
       class="whatsapp-float"
+      aria-label="Enviar mensagem pelo WhatsApp"
     >
       <i class="fab fa-whatsapp"></i>
     </a>
