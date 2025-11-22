@@ -124,3 +124,22 @@
   font-family: "Font Awesome 6 Free";
   font-weight: 900; /* necessário para solid */
 }
+
+/* Footer Icons */
+.fas.fa-map-marker-alt:before {
+  content: "\f3c5"; /* Unicode do ícone map-marker-alt */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.fas.fa-phone:before {
+  content: "\f095"; /* Unicode do ícone phone */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.fas.fa-envelope:before {
+  content: "\f0e0"; /* Unicode do ícone envelope */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
