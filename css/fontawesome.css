@@ -1,29 +1,126 @@
-/* Font Awesome Local - usando apenas as fontes necessárias */
-/* SOLID - Peso 900 */
+/* Font Awesome 6.4.0 - Minimalista só com os ícones usados */
+
+/* Fonte principal */
 @font-face {
   font-family: "Font Awesome 6 Free";
+  font-style: normal;
   font-weight: 900;
-  font-display: swap;
-  src: url("../assets/fonts/fa-solid-900.woff2") format("woff2");
+  font-display: block;
+  src: url("../assets/fonts/fa-solid-900.woff2") format("woff2"),
+    url("../assets/fonts/fa-solid-900.woff") format("woff");
 }
 
-/* BRANDS - Peso 400 */
 @font-face {
   font-family: "Font Awesome 6 Brands";
+  font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url("../assets/fonts/fa-brands-400.woff2") format("woff2");
+  font-display: block;
+  src: url("../assets/fonts/fa-brands-400.woff2") format("woff2"),
+    url("../assets/fonts/fa-brands-400.woff") format("woff");
 }
 
-/* Classes do Font Awesome (mínimas para funcionar sem o CDN) */
+/* Base das classes */
 .fa,
+.fas,
+.fab {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* Estilos sólidos (fas) */
 .fas {
-  font-family: "Font Awesome 6 Free" !important;
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
+/* Estilos de marcas (fab) */
 .fab {
-  font-family: "Font Awesome 6 Brands" !important;
+  font-family: "Font Awesome 6 Brands";
   font-weight: 400;
 }
 
+/* Ícones usados */
+
+/* Menu / Navegação */
+.fa-bars:before {
+  content: "\f0c9";
+}
+.fa-chevron-down:before {
+  content: "\f078";
+}
+
+/* Seções */
+.fa-users:before {
+  content: "\f0c0";
+}
+.fa-heart:before {
+  content: "\f004";
+}
+.fa-hands-helping:before {
+  content: "\f4c4";
+}
+.fa-user-friends:before {
+  content: "\f500";
+}
+.fa-brain:before {
+  content: "\f5dc";
+}
+.fa-book-reader:before {
+  content: "\f5da";
+}
+.fa-graduation-cap:before {
+  content: "\f19d";
+}
+.fa-walking:before {
+  content: "\f554";
+}
+.fa-comments:before {
+  content: "\f086";
+}
+.fa-utensils:before {
+  content: "\f2e7";
+}
+.fa-clipboard-list:before {
+  content: "\f46d";
+}
+.fa-hand-holding-heart:before {
+  content: "\f4be";
+}
+.fa-user:before {
+  content: "\f007";
+}
+
+/* Blog */
+.fa-newspaper:before {
+  content: "\f1ea";
+}
+.fa-calendar-alt:before {
+  content: "\f073";
+}
+.fa-images:before {
+  content: "\f302";
+}
+
+/* Ícones de marcas (fab) */
+.fab.fa-instagram:before {
+  content: "\f16d";
+}
+.fab.fa-facebook:before {
+  content: "\f09a";
+}
+.fab.fa-youtube:before {
+  content: "\f167";
+}
+.fab.fa-linkedin:before {
+  content: "\f08c";
+}
+
+/* Ícone de link (para Linktree) */
+.fas.fa-link:before {
+  content: "\f0c1"; /* código Unicode do ícone link */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900; /* necessário para solid */
+}
