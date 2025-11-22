@@ -10,8 +10,18 @@
     />
     <title>OCA - Organização Cultural Alternativa</title>
     <!-- Preload + async para Font Awesome -->
-    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="preload" href="css/fontawesome.css" as="style" />
+    
+    <link
+      rel="stylesheet"
+      href="css/fontawesome.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    
+    <noscript><link rel="stylesheet" href="css/fontawesome.css" /></noscript>
     <link rel="stylesheet" href="css/style.css" />
+    
     <noscript>
       <link
         rel="stylesheet"
