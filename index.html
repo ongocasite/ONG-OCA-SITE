@@ -8,52 +8,37 @@
       href="assets/img/logotipos/logotipo - ong oca/logo 01.webp"
       type="image/x-icon"
     />
+
     <title>OCA - Organização Cultural Alternativa</title>
-    <!-- Preload + async para Font Awesome -->
+
+    <!-- Font Awesome Local -->
     <link rel="preload" href="css/fontawesome.css" as="style" />
-    
     <link
       rel="stylesheet"
       href="css/fontawesome.css"
       media="print"
       onload="this.media='all'"
     />
-    
     <noscript><link rel="stylesheet" href="css/fontawesome.css" /></noscript>
-    <link rel="stylesheet" href="css/style.css" />
-    
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      />
-    </noscript>
 
-    <!-- Preload + async para Google Fonts -->
+    <!-- CSS principal -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts -->
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       as="style"
       onload="this.rel='stylesheet'"
     />
-    <noscript>
-      <link
+    <noscript
+      ><link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      />
-    </noscript>
-
-    <!-- Seu CSS local carregando sem bloquear -->
-    <link
-      rel="preload"
-      href="css/style.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="css/style.css" />
-    </noscript>
+    /></noscript>
   </head>
+
 
   <body>
     <!-- Header -->
