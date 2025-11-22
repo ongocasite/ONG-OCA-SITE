@@ -9,15 +9,44 @@
       type="image/x-icon"
     />
     <title>OCA - Organização Cultural Alternativa</title>
+    <!-- Preload + async para Font Awesome -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+    </noscript>
+
+    <!-- Preload + async para Google Fonts -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      />
+    </noscript>
+
+    <!-- Seu CSS local carregando sem bloquear -->
+    <link
+      rel="preload"
+      href="css/style.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/style.css" />
+    </noscript>
   </head>
 
   <body>
