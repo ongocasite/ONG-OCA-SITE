@@ -143,3 +143,8 @@
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+
+/* Ícone do WhatsApp */
+.fab.fa-whatsapp:before {
+  content: "\f232"; /* Unicode do ícone WhatsApp */
+}
