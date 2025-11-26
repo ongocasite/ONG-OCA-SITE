@@ -1626,7 +1626,6 @@ footer {
     height: 45px;
     font-size: 1.4rem;
   }
-}
 
 /* Landscape em smartphones */
 @media (max-height: 500px) and (orientation: landscape) {
