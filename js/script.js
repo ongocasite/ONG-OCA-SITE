@@ -1,4 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
+  function createSnowflake() {
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.textContent = "❄"; // você pode trocar por "•"
+
+    // posição aleatória no X
+    snowflake.style.left = Math.random() * 100 + "vw";
+
+    // tamanho random
+    snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+
+    // duração da animação (velocidade)
+    const duration = Math.random() * 5 + 5; // 5–10s
+    snowflake.style.animationDuration = duration + "s";
+
+    // opacidade
+    snowflake.style.opacity = Math.random() * 0.6 + 0.4;
+
+    document.getElementById("snow-container").appendChild(snowflake);
+
+    // remove depois
+    setTimeout(() => {
+      snowflake.remove();
+    }, duration * 1000);
+  }
+
+  // criar floquinhos contínuos
+  setInterval(createSnowflake, 150);
+
   // Carrossel Hero
   let currentSlide = 0;
   const slides = document.querySelectorAll(".carousel-slide");
