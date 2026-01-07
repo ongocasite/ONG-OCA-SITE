@@ -9,16 +9,36 @@ O projeto foi desenvolvido com foco em simplicidade, desempenho e fácil manuten
 A estrutura foi organizada de forma direta, mantendo todos os recursos essenciais do site de maneira clara e objetiva:
 
 ```
-├── 🗂️ img/      # Imagens da seção de doações
-│   ├── 📁 doacao/    # Imagens da seção de doações
-│   ├── 📁 logotipos-bancos/ # Logos dos bancos (área de doação)
-│   ├── 📁 logotipos-ong/ # Identidade visual da ONG
-│   └── 📁 parceiros/   # Logos dos parceiros institucionais
+ONG-OCA-SITE
+├── 🗂️ assets
+│   ├── 🗂️ fonts
+│   │   ├── 📄 fa-brands-400.woff2
+│   │   └── 📄 fa-solid-900.woff2
+│   │
+│   └── 🗂️ img
+│       ├── 🗂️ banners
+│       │   ├── 🗂️ desktop
+│       │   └── 🗂️ mobile
+│       │
+│       ├── 🗂️ doacao
+│       │
+│       ├── 🗂️ logotipos
+│       │   ├── 🗂️ logotipo-banco
+│       │   ├── 🗂️ logotipo-ong-oca
+│       │   └── 🗂️ logotipo-parceiros
+│       │
+│       └── 🗂️ natal
 │
-├── 📄 CNAME   # Domínio personalizado (www.ongoca.org)
-├── 📄 LICENSE.txt  # Licença do projeto
-├── 📄 README.md    # Documentação técnica do projeto
-└── 📄 index.html   # Arquivo principal (HTML, CSS e JS integrados)
+├── 🗂️ css
+│   ├── 📄 fontawesome.css
+│   └── 📄 style.css
+│
+├── 🗂️ js
+│   └── 📄 script.js
+│
+├── 📄 CNAME
+├── 📄 index.html
+└── 📄 README.md
 ```
 
 
@@ -45,8 +65,3 @@ O site é hospedado através do **GitHub Pages**, e pode ser acessado em:
 https://www.ongoca.org/
 
 O domínio é configurado via arquivo `CNAME` e redirecionado automaticamente para o repositório principal.
-
-## 📄 Licença
-
-Este projeto está licenciado sob os termos presentes em:
-`LICENSE.txt`.
