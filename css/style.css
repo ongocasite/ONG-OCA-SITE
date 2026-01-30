@@ -282,6 +282,7 @@ body.dark-mode .dark-mode-toggle .sun-icon {
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: 3;
   color: #fff;
   padding: 0 20px;
 }
@@ -289,6 +290,8 @@ body.dark-mode .dark-mode-toggle .sun-icon {
 .carousel-content {
   max-width: 800px;
   padding: 20px;
+  position: relative;
+  z-index: 4;
 }
 
 .carousel-content h1 {
@@ -1693,28 +1696,4 @@ footer {
   }
 }
 
-/* fogos de artificio 2026 */
-#fireworks {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  transition: opacity 1.5s ease;
-}
-
-
-#home {
-  position: relative;
-  overflow: hidden;
-}
-
-/* garante que o conteúdo fique acima */
-.carousel,
-.carousel-overlay {
-  position: relative;
-  z-index: 1;
-}
 
