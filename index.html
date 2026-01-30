@@ -2,7 +2,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" href="assets/img/logotipos/logotipo - ong oca/2026 logo.png" type="image/x-icon" />
+  <link rel="icon" href="assets/img/logotipos/logotipo - ong oca/logotipo.webp" type="image/x-icon" />
 
   <title>OCA - Organização Cultural Alternativa</title>
 
@@ -33,7 +33,7 @@
 
   <body>
 
-<canvas id="fireworks"></canvas>
+<!-- <canvas id="fireworks"></canvas> -->
 
     <!-- Header -->
     <header>
@@ -41,7 +41,7 @@
         <div class="logo">
           <a href="#home">
             <img
-              src="assets/img/logotipos/logotipo - ong oca/2026 logo.png"
+              src="assets/img/logotipos/logotipo - ong oca/logotipo.webp"
               alt="Logo ONG OCA"
             />
           </a>
@@ -86,20 +86,59 @@
       
     </header>
 
-
-
     <main>
       <!-- Hero Banner -->
       <section id="home">
         <div class="carousel">
-          <div class="carousel-slide active">
+    <!-- SLIDE 1 -->
+    <div class="carousel-slide active">
+      <picture>
+        <source media="(max-width: 768px)" srcset="assets/img/banners/mobile/Campanha_Kit_Escolar.png" />
+        <img
+          src="assets/img/banners/desktop/Campanha_Kit_Escolar.png"
+          alt="Campanha Kit Escolar"
+          class="carousel-img"
+          decoding="async"
+          width="1920"
+          height="1080"
+        />
+      </picture>
+                  <div class="carousel-overlay">
+              <div class="carousel-content">            
+                 <a href="https://wa.me/5521968181005" target="_blank" aria-label="Enviar mensagem pelo WhatsApp" class="btn-primary" onclick="openModal()">DOAR</a>
+              </div>
+            </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="carousel-slide">
+      <picture>
+        <source media="(max-width: 768px)" srcset="assets/img/banners/mobile/IMG-20260114-WA0081.jpg" />
+        <img
+          src="assets/img/banners/desktop/IMG-20260114-WA0077.jpg"
+          alt="Campanha Social"
+          class="carousel-img"
+          decoding="async"
+          width="1920"
+          height="1080"
+        />
+      </picture>
+                  <div class="carousel-overlay">
+              <div class="carousel-content">
+                
+               <a href="#" class="btn-primary" onclick="openModal()">DOAR</a>
+              </div>
+            </div>
+    </div>
+
+              <div class="carousel-slide">
             <picture>
               <source
                 media="(max-width: 768px)"
-                srcset="assets/img/banners/mobile/2026-celular.png"
+                srcset="assets/img/banners/desktop/doação.webp"
               />
               <img
-                src="assets/img/banners/desktop/2026 site.png"
+                src="assets/img/banners/desktop/doação.webp"
                 alt="ano novo"
                 class="carousel-img"
                 fetchpriority="high"
@@ -110,20 +149,21 @@
             </picture>
 
             <div class="carousel-overlay">
-              <div class="carousel-content">
-                
-               <!--  <a href="#" class="btn-primary" onclick="openModal()">DOAR</a> -->
+              <div class="carousel-content"> 
+               <a href="#" class="btn-primary" onclick="openModal()">DOAR</a>
               </div>
             </div>
           </div>
 
+  </div>
 
         </div>
 
+        <!-- CONTROLES -->
         <div class="carousel-controls">
           <span class="carousel-dot active" onclick="goToSlide(0)"></span>
-        <!--  <span class="carousel-dot" onclick="goToSlide(1)"></span> -->
-        <!--  <span class="carousel-dot" onclick="goToSlide(2)"></span>  -->
+          <span class="carousel-dot" onclick="goToSlide(1)"></span> 
+          <span class="carousel-dot" onclick="goToSlide(2)"></span> 
         </div>
       </section>
 
