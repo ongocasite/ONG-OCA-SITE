@@ -1,95 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-// ========== FIREWORKS ==========
-const canvas = document.getElementById("fireworks");
-if (!canvas) return;
-
-const ctx = canvas.getContext("2d");
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener("resize", resize);
-
-class Particle {
-  constructor(x, y, color) {
-    this.x = x;
-    this.y = y;
-    this.radius = Math.random() * 2 + 1;
-    this.color = color;
-    this.speedX = (Math.random() - 0.5) * 6;
-    this.speedY = (Math.random() - 0.5) * 6;
-    this.life = 100;
-  }
-
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    this.life--;
-  }
-
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  }
-}
-
-let particles = [];
-let running = true;
-
-function explode(x, y) {
-  const colors = ["#ff3f3f", "#ffd93d", "#4d96ff", "#6bff95", "#ffffff"];
-  for (let i = 0; i < 60; i++) {
-    particles.push(
-      new Particle(x, y, colors[Math.floor(Math.random() * colors.length)])
-    );
-  }
-}
-
-function animate() {
-  if (!running) return;
-
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  particles = particles.filter(p => p.life > 0);
-  particles.forEach(p => {
-    p.update();
-    p.draw();
-  });
-
-  requestAnimationFrame(animate);
-}
-
-/* dispara fogos enquanto ativo */
-const fireworksInterval = setInterval(() => {
-  if (!running) return;
-
-  const x = Math.random() * canvas.width;
-  const y = Math.random() * canvas.height * 0.5;
-  explode(x, y);
-}, 800);
-
-animate();
-
-/* fade out automático após 6 segundos */
-setTimeout(() => {
-  canvas.style.opacity = "0";
-
-  /* encerra completamente após o fade */
-  setTimeout(() => {
-    running = false;
-    clearInterval(fireworksInterval);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }, 1500);
-}, 40000);
-
-// ========== FIM FIREWORKS ==========
-
-
   // Carrossel Hero
   let currentSlide = 0;
   const slides = document.querySelectorAll(".carousel-slide");
@@ -124,7 +33,7 @@ setTimeout(() => {
   let currentDepoimento = 0;
   const depoimentos = document.querySelectorAll(".depoimento-slide");
   const depoimentoDots = document.querySelectorAll(
-    "#depoimentos .carousel-dot"
+    "#depoimentos .carousel-dot",
   );
 
   function showDepoimento(n) {
