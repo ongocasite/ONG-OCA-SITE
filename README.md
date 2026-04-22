@@ -92,3 +92,8 @@ O site é hospedado através do **GitHub Pages**, e pode ser acessado em:
 https://www.ongoca.org/
 
 O domínio é configurado via arquivo `CNAME` e redirecionado automaticamente para o repositório principal.
+
+## 🔒 Segurança
+
+Este projeto não armazena informações sensíveis no repositório.
+Quaisquer integrações externas utilizam boas práticas de segurança e variáveis protegidas.
