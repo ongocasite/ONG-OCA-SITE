@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  let siteInitialized = false;
+
+  function initSite() {
+    if (siteInitialized) return;
+    siteInitialized = true;
+
   // Carrossel Hero
   let currentSlide = 0;
   const slides = document.querySelectorAll(".carousel-slide");
@@ -171,4 +178,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  
+  }
+
+  // OBSERVER FORA
+  const observer = new MutationObserver(() => {
+    const header = document.querySelector("header");
+
+if (header) {
+  initSite();
+} else {
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
 });
