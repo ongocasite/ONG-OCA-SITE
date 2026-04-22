@@ -1,0 +1,112 @@
+    <!-- Modal de Doação -->
+    <div class="modal" id="modalDoacao">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h2>Faça sua Doação</h2>
+
+        <div class="donation-container-vertical">
+          <!-- PIX -->
+          <div class="donation-option pix-area">
+            <div class="pix-conteudo">
+              <div class="pix-logo">
+                <img
+                  src="assets/img/doacao/PIX.webp"
+                  alt="QR Code PIX ONG OCA"
+                />
+              </div>
+              <div class="pix-info">
+                <h3><i class="fas fa-qrcode"></i> PIX</h3>
+                <p><strong>Chave PIX (CNPJ):</strong></p>
+                <div class="pix-key">02.920.198/0001-57</div>
+                <p class="pix-legenda">
+                  Escaneie o QR Code ao lado ou use a chave acima para doar via
+                  PIX.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Banco Itaú -->
+          <div class="donation-option banco-itau">
+            <div class="banco-conteudo">
+              <div class="banco-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - banco/itau.webp"
+                  alt="Logo Banco Itaú"
+                />
+              </div>
+              <div class="banco-info">
+                <h3>
+                  <i class="fas fa-university"></i> Transferência Bancária
+                </h3>
+                <p><strong>Banco:</strong> <span>Banco Itaú</span></p>
+                <p><strong>Agência:</strong> 9294</p>
+                <p><strong>Conta Corrente:</strong> 07452-2</p>
+                <p><strong>CNPJ:</strong> 02.920.198/0001-57</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Banco Santander -->
+          <div class="donation-option banco-santander">
+            <div class="banco-conteudo">
+              <div class="banco-logo">
+                <img
+                  src="assets/img/logotipos/logotipo - banco/santander.webp"
+                  alt="Logo Banco Santander"
+                />
+              </div>
+              <div class="banco-info">
+                <h3>
+                  <i class="fas fa-university"></i> Transferência Bancária
+                </h3>
+                <p><strong>Banco:</strong> <span>Banco Santander</span></p>
+                <p><strong>Agência:</strong> 3161</p>
+                <p><strong>Conta Corrente:</strong> 130002528</p>
+                <p><strong>CNPJ:</strong> 02.920.198/0001-57</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Voluntário -->
+    <div class="modal" id="modalVoluntario">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeVoluntarioModal()"
+          >&times;</span
+        >
+        <h2>Seja um Voluntário</h2>
+        <form onsubmit="handleVoluntarioSubmit(event)">
+          <div class="form-group">
+            <label>Nome Completo</label>
+            <input type="text" required />
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" required />
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" required />
+          </div>
+          <div class="form-group">
+            <label>Área de Interesse</label>
+            <input
+              type="text"
+              placeholder="Ex: Eventos, Administração, Educação..."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Mensagem</label>
+            <textarea
+              placeholder="Conte-nos um pouco sobre você e por que quer ser voluntário..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Enviar Inscrição</button>
+        </form>
+      </div>
+    </div>

@@ -1,0 +1,24 @@
+<!-- WhatsApp Flutuante -->
+<a
+  href="https://wa.me/5521968181005"
+  target="_blank"
+  class="whatsapp-float"
+  aria-label="Enviar mensagem pelo WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- VLibras - Acessibilidade em Libras -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  window.addEventListener("load", () => {
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  });
+</script>
