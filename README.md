@@ -29,12 +29,34 @@ ONG-OCA-SITE
 │       │
 │       └── 🗂️ natal
 │
+├── 🗂️ components
+│   ├──	📄 ajudar.html
+│   ├──	📄 blog.html
+│   ├── 📄 contato.html
+│   ├── 📄 depoimentos.html
+│   ├──	📄 extras.html
+│   ├──	📄 faq.html
+│   ├──	📄 footer.html
+│   ├──	📄 header.html
+│   ├──	📄 hero.html
+│   ├──	📄 modals.html
+│   ├──	📄 parceiros.html
+│   ├──	📄 resultados.html
+│   ├──	📄 servicos.html
+│   ├──	📄 sobre.html
+│   └──	📄 transparencia.html
+│
 ├── 🗂️ css
+│   ├──	📄 base.css
+│   ├──	📄 components.css
 │   ├── 📄 fontawesome.css
-│   └── 📄 style.css
+│   ├── 📄 layout.css
+│   ├──	📄 responsive.css
+│   └──	📄 sections.css
 │
 ├── 🗂️ js
-│   └── 📄 script.js
+│   ├── 📄 script.js
+│   └──	📄 components.js
 │
 ├── 📄 CNAME
 ├── 📄 index.html
@@ -44,11 +66,16 @@ ONG-OCA-SITE
 
 ## 🛠️ Tecnologias Utilizadas
 
+## Para a **Camada de Aplicação**
 - 📄 **HTML5** – Estruturação e semântica  
 - 🖌️ **CSS3** – Estilos e layout  
-- 🧠 **JavaScript Vanilla** – Funcionalidades dinâmicas  
-- 🎯 **Font Awesome** – Ícones  
-- 🌐 **GitHub Pages** – Hospedagem  
+- 🧠 **JavaScript Vanilla** – Funcionalidades dinâmicas
+- 🎯 **Font Awesome** – Ícones
+
+## Para a **Camada de Infraestrutura**
+- 🌐 **RedeHost** – Domínio  
+- 🌐 **CloudFlare** – DNS + Segurança  
+- 🌐 **GitHub Pages** – Hospedagem 
 
 ## 🧩 Estrutura Interna do Código
 
