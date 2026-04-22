@@ -1,4 +1,4 @@
-# 🤝 ONG OCA - Site Institucional
+# 💚 ONG OCA - Site Institucional
 
 Este repositório contém o código-fonte do site institucional da **ONG OCA (Organização Cultural Alternativa)**.  
 
@@ -73,9 +73,9 @@ ONG-OCA-SITE
 - 🎯 **Font Awesome** – Ícones
 
 ## Para a **Camada de Infraestrutura**
-- 🌐 **RedeHost** – Domínio  
-- 🌐 **CloudFlare** – DNS + Segurança  
-- 🌐 **GitHub Pages** – Hospedagem 
+- 🌍 **RedeHost** – Domínio  
+- 🛡️ **CloudFlare** – DNS + Segurança  
+- 🚀 **GitHub Pages** – Hospedagem 
 
 ## 🧩 Estrutura Interna do Código
 
