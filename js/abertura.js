@@ -7,7 +7,7 @@
   "use strict";
 
   /* ---------- CONFIGURAÇÃO ---------- */
-  var SO_UMA_VEZ_POR_SESSAO = true; // false = aparece em todo carregamento
+  var SO_UMA_VEZ_POR_SESSAO = false; // true = só na 1ª visita da sessão; false = em todo carregamento/atualização
   var CHAVE = "ocaAberturaVista";
   var MOMENTO_DA_SAIDA = 4.6; // segundos até começar a sair
 
