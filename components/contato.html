@@ -4,30 +4,43 @@
           <h2 class="section-title">Entre em Contato</h2>
           <div class="contato-grid">
             <div>
-              <form onsubmit="handleSubmit(event)">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                onsubmit="handleSubmit(event)"
+              >
+                <!-- Configuração do envio (a chave é pública por design) -->
+                <input type="hidden" name="access_key" value="c0883eda-6a42-4d86-9bce-66b4b5a1584f" />
+                <input type="hidden" name="subject" value="Nova mensagem pelo site da OCA" />
+                <input type="hidden" name="from_name" value="Site ONG OCA" />
+                <!-- Anti-spam: robôs preenchem, pessoas nunca veem -->
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display: none" />
+
                 <div class="form-group">
                   <label for="nome">Nome Completo</label>
-                  <input id="nome" type="text" required />
+                  <input id="nome" name="name" type="text" required />
                 </div>
 
                 <div class="form-group">
                   <label for="email">E-mail</label>
-                  <input id="email" type="email" required />
+                  <input id="email" name="email" type="email" required />
                 </div>
 
                 <div class="form-group">
                   <label for="telefone">Telefone</label>
-                  <input id="telefone" type="tel" required />
+                  <input id="telefone" name="telefone" type="tel" required />
                 </div>
 
                 <div class="form-group">
                   <label for="mensagem">Mensagem</label>
-                  <textarea id="mensagem" required></textarea>
+                  <textarea id="mensagem" name="message" required></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit">
                   Enviar Mensagem
                 </button>
+
+                <p class="form-status" role="status" aria-live="polite"></p>
               </form>
             </div>
             <div class="mapa-container">
