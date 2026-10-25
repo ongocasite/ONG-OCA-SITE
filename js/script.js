@@ -104,11 +104,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // Formulários
-  window.handleSubmit = function (event) {
+  // Formulário de contato (envio real por e-mail)
+  window.handleSubmit = async function (event) {
     event.preventDefault();
-    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    event.target.reset();
+    const form = event.target;
+    const botao = form.querySelector(".btn-submit");
+    const status = form.querySelector(".form-status");
+    const textoOriginal = botao.textContent;
+
+    botao.disabled = true;
+    botao.textContent = "Enviando...";
+    status.className = "form-status";
+    status.textContent = "";
+
+    try {
+      const resposta = await fetch(form.action, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      const dados = await resposta.json();
+
+      if (!resposta.ok || dados.success === false) {
+        throw new Error(dados.message || "Falha no envio");
+      }
+
+      status.textContent =
+        "Mensagem enviada com sucesso! Entraremos em contato em breve.";
+      status.classList.add("sucesso");
+      form.reset();
+    } catch (erro) {
+      status.textContent =
+        "Não foi possível enviar agora. Tente novamente ou escreva para presidencia@ongoca.org.";
+      status.classList.add("erro");
+    } finally {
+      botao.disabled = false;
+      botao.textContent = textoOriginal;
+    }
   };
 
   // Scroll suave ao clicar nos links
