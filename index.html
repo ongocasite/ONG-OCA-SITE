@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- ABERTURA: se já foi vista nesta sessão, nem aparece (evita "piscada") -->
+    <script>
+      try {
+        if (sessionStorage.getItem("ocaAberturaVista")) {
+          document.documentElement.classList.add("ab-pula");
+        }
+      } catch (e) {}
+    </script>
+    <noscript><style>#abertura{display:none}</style></noscript>
+
     <link rel="icon" href="assets/img/logotipos/logotipo - ong oca/logotipo.webp" type="image/x-icon"/>
 
     <title>OCA - Organização Cultural Alternativa</title>
@@ -15,6 +25,9 @@
 
     <!-- BASE (reset + variáveis) -->
     <link rel="stylesheet" href="css/base.css" />
+
+    <!-- ABERTURA (precisa carregar cedo para cobrir a tela desde o início) -->
+    <link rel="stylesheet" href="css/abertura.css" />
 
     <!-- LAYOUT (header, footer, estrutura geral) -->
     <link rel="stylesheet" href="css/layout.css" />
@@ -34,6 +47,58 @@
   </head>
 
   <body>
+    <!-- ============ ABERTURA ============ -->
+    <div id="abertura" role="dialog" aria-label="Abertura do site da ONG OCA">
+      <div class="ab-verde"></div>
+
+      <div class="ab-creme">
+        <!-- molde de folha e estrela (reaproveitados abaixo) -->
+        <svg class="ab-defs" aria-hidden="true" focusable="false">
+          <defs>
+            <symbol id="ab-folha" viewBox="0 0 100 50">
+              <path d="M2 25C25-5 75-5 98 25 75 55 25 55 2 25Z" fill="currentColor" />
+              <path d="M10 25H90" stroke="#fbf8ec" stroke-width="1.6" stroke-linecap="round" opacity=".55" fill="none" />
+            </symbol>
+            <symbol id="ab-estrela" viewBox="0 0 24 24">
+              <polygon points="12,2 14.9,8.8 22.2,9.4 16.6,14.2 18.4,21.4 12,17.5 5.6,21.4 7.4,14.2 1.8,9.4 9.1,8.8" fill="#f4b93a" stroke="#f4b93a" stroke-width="1.6" stroke-linejoin="round" />
+            </symbol>
+          </defs>
+        </svg>
+
+        <!-- folhas (cantos) -->
+        <div class="ab-folha" data-rot="25"  style="--t:-3%;  --l:-4%; --w:clamp(120px,24vw,320px); --c:#5cb85c"><svg aria-hidden="true"><use href="#ab-folha"/></svg></div>
+        <div class="ab-folha" data-rot="-18" style="--t:9%;   --l:9%;  --w:clamp(54px,9vw,130px);   --c:#2f8f45"><svg aria-hidden="true"><use href="#ab-folha"/></svg></div>
+        <div class="ab-folha" data-rot="155" style="--t:-2%;  --r:-5%; --w:clamp(130px,26vw,340px); --c:#2f8f45"><svg aria-hidden="true"><use href="#ab-folha"/></svg></div>
+        <div class="ab-folha" data-rot="205" style="--t:15%;  --r:7%;  --w:clamp(50px,8vw,120px);   --c:#7cc47f"><svg aria-hidden="true"><use href="#ab-folha"/></svg></div>
+        <div class="ab-folha" data-rot="-35" style="--b:-3%;  --l:-4%; --w:clamp(130px,26vw,340px); --c:#4caf50"><svg aria-hidden="true"><use href="#ab-folha"/></svg></div>
+        <div class="ab-folha" data-rot="20"  style="--b:16%;  --l:6%;  --w:clamp(48px,8vw,120px);   --c:#8bd18d"><svg aria-hidden="true"><use href="#ab-folha"/></svg></div>
+        <div class="ab-folha" data-rot="205" style="--b:-4%;  --r:-3%; --w:clamp(120px,24vw,320px); --c:#2f8f45"><svg aria-hidden="true"><use href="#ab-folha"/></svg></div>
+        <div class="ab-folha" data-rot="160" style="--b:12%;  --r:9%;  --w:clamp(54px,9vw,130px);   --c:#5cb85c"><svg aria-hidden="true"><use href="#ab-folha"/></svg></div>
+
+        <!-- estrelas -->
+        <div class="ab-estrela" style="--t:22%; --l:20%; --s:22px"><svg aria-hidden="true"><use href="#ab-estrela"/></svg></div>
+        <div class="ab-estrela" style="--t:18%; --r:19%; --s:28px"><svg aria-hidden="true"><use href="#ab-estrela"/></svg></div>
+        <div class="ab-estrela" style="--b:30%; --l:14%; --s:18px"><svg aria-hidden="true"><use href="#ab-estrela"/></svg></div>
+        <div class="ab-estrela" style="--b:34%; --r:15%; --s:22px"><svg aria-hidden="true"><use href="#ab-estrela"/></svg></div>
+        <div class="ab-estrela" style="--b:18%; --r:34%; --s:16px"><svg aria-hidden="true"><use href="#ab-estrela"/></svg></div>
+
+        <!-- logotipo + frase -->
+        <div class="ab-centro">
+          <div class="ab-logo" role="img" aria-label="OCA - Organização Cultural Alternativa">
+            <img class="ab-o"     src="assets/img/logotipos/logotipo - ong oca/logo-o.webp"     alt="" />
+            <img class="ab-c"     src="assets/img/logotipos/logotipo - ong oca/logo-c.webp"     alt="" />
+            <img class="ab-a"     src="assets/img/logotipos/logotipo - ong oca/logo-a.webp"     alt="" />
+            <img class="ab-texto" src="assets/img/logotipos/logotipo - ong oca/logo-texto.webp" alt="" />
+          </div>
+          <p class="ab-frase">Semeando possibilidades, despertando sonhos.</p>
+        </div>
+
+        <div class="ab-barra" aria-hidden="true"><span></span></div>
+        <button type="button" class="ab-pular" aria-label="Pular a abertura e ir para o site">Pular abertura</button>
+      </div>
+    </div>
+    <!-- ============ FIM DA ABERTURA ============ -->
+
     <div id="header"></div>
     <div id="hero"></div>
     <div id="sobre"></div>
@@ -51,6 +116,10 @@
     <!-- extras e modais -->
     <div id="modals"></div>
     <div id="extras"></div>
+
+    <!-- GSAP + abertura (antes do carregamento dos componentes) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/abertura.js"></script>
 
     <script src="js/components.js"></script>
     <script src="js/script.js"></script>
