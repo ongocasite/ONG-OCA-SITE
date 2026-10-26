@@ -530,3 +530,11 @@ body.dark-mode .dark-mode-toggle .sun-icon {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
+.transparencia-botoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
